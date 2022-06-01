@@ -19,12 +19,12 @@ class Login extends Component {
   componentDidMount() {
     // If logged in and user navigates to Login page, should redirect them to dashboard
     if (this.props.auth.isAuthenticated) {
-      this.props.history.push('/dashboard');
+      this.props.history.push('/AdminDashboard');
     }
   }
   componentWillReceiveProps(nextProps) {
     if (nextProps.auth.isAuthenticated) {
-      this.props.history.push('/dashboard'); // push user to dashboard when they login
+      this.props.history.push('/AdminDashboard'); // push user to dashboard when they login
     }
     if (nextProps.errors) {
       this.setState({
@@ -60,7 +60,7 @@ class Login extends Component {
             </div>
             <div className="col-lg-6">
               <div className="login-right">
-                <h1>Login</h1>
+                <h1>Admin Login</h1>
                 <form noValidate onSubmit={this.loginSubmit}>
                   <div class="form-row">
                     <div class="form-group col-md-12">
@@ -111,16 +111,6 @@ class Login extends Component {
                       <button type="submit" className="btn btn-md btn-register">
                         Login
                       </button>
-                    </div>
-                  </div>
-                  <div class="form-row">
-                    <div class="form-group col-md-12">
-                      <p>
-                        Don't have an account ?
-                        <Link to="/register" className="text-success">
-                          Create one
-                        </Link>
-                      </p>
                     </div>
                   </div>
                 </form>

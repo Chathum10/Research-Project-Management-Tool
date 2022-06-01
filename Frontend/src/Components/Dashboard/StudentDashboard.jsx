@@ -22,7 +22,7 @@ class Dashboard extends Component {
                   H! <b>{user.name.split(' ')[0]} </b>
                 </h1>
                 <h3>
-                  You are Successfully logged into a Full-stack MERN Application
+                  You are Successfully logged into Student Dashboard
                 </h3>
                 <button
                   onClick={this.onLogoutClick}

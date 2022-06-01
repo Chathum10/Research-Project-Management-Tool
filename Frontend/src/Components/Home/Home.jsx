@@ -20,7 +20,7 @@ class Home extends Component {
                 </h1>
                 <div className="buttons">
                   <Link
-                    to="/login"
+                    to="/loginAs"
                     className="btn btn-lg btn-outline-none border-3 btn-login"
                   >
                     Login

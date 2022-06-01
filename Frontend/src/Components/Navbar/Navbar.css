@@ -5,7 +5,9 @@ nav {
 }
 .navbar-brand {
     font-weight: bolder;
-    letter-spacing: 2px;
+    letter-spacing: 10px;
+    background-image: url('../images/sliit.jpg');
+    
 }
 
 .nav-item .btn {

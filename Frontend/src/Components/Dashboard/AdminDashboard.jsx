@@ -30,6 +30,7 @@ class Dashboard extends Component {
                 >
                   Logout
                 </button>
+                <button><a href="/userProfiles">User Management</a></button>
               </div>
             </div>
           </div>

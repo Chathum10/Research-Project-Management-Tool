@@ -6,12 +6,17 @@ import { connect } from 'react-redux';
 import { registerUser } from '../../redux/actions/authActions';
 import classnames from 'classnames';
 
+
 class Register extends Component {
   constructor() {
     super();
     this.state = {
       name: '',
       email: '',
+      userCategory: '',
+      regNo: '',
+      nic: '',
+      pNo: '',
       password: '',
       password2: '',
       errors: {}
@@ -39,6 +44,10 @@ class Register extends Component {
     const newUser = {
       name: this.state.name,
       email: this.state.email,
+      userCategory: this.state.userCategory,
+      regNo: this.state.regNo,
+      nic: this.state.nic,
+      pNo: this.state.pNo,
       password: this.state.password,
       password2: this.state.password2
     };
@@ -46,7 +55,7 @@ class Register extends Component {
   };
 
   render() {
-    const { errors, name, password, password2, email } = this.state;
+    const { errors, name, password, password2, email, userCategory, regNo, nic, pNo} = this.state;
     return (
       <section className="register">
         <div className="container">
@@ -60,9 +69,27 @@ class Register extends Component {
               </div>
             </div>
             <div className="col-lg-6">
-              <div className="signup-right">
+              <div className="signup-right"><br /><br /><br />
                 <h1>Signup</h1>
-                <form noValidate onSubmit={this.registerSubmit}>
+                <form noValidate onSubmit={this.registerSubmit}><br />
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                      <label htmlFor="name">User Category</label> <br />
+                      <select name="userCategory"   defaultValue="Select Type"  id="userCategory" classname="input-control"  value={userCategory}
+                        onChange={this.onChangeRegister}
+                        error={errors.userCategory}
+                        className={classnames('', {
+                          invalid: errors.userCategory
+                        })}>
+                                        <option defaultValue>--Select User Category--</option>
+                                        <option value="Student">Student</option>
+                                        <option value="Supervisor">Supervisor</option>
+                                        <option value="Co-Supervisor">Co-Supervisor</option>
+                                        <option value="Pannel Member">Pannel Member</option>
+                                    </select>{' '}
+                      <br />
+                    </div>
+                  </div>
                   <div class="form-row">
                     <div class="form-group col-md-12">
                       <label htmlFor="name">Full Name</label> <br />
@@ -84,7 +111,26 @@ class Register extends Component {
                   </div>
                   <div class="form-row">
                     <div class="form-group col-md-12">
-                      <label htmlFor="Email">Email</label> <br />
+                      <label htmlFor="name">SLIIT Reg No:</label> <br />
+                      <input
+                        type="text"
+                        classname="input-control"
+                        placeholder="Enter your SLIIT Registration Number"
+                        id="regNo"
+                        value={regNo}
+                        onChange={this.onChangeRegister}
+                        error={errors.regNo}
+                        className={classnames('', {
+                          invalid: errors.regNo
+                        })}
+                      />{' '}
+                      <br />
+                      <span className="text-danger">{errors.name}</span>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-12">
+                      <label htmlFor="Email">SLIIT Email</label> <br />
                       <input
                         type="email"
                         classname="input-control"
@@ -99,6 +145,44 @@ class Register extends Component {
                       />{' '}
                       <br />
                       <span className="text-danger">{errors.email}</span>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-12">
+                      <label htmlFor="name">NIC No:</label> <br />
+                      <input
+                        type="text"
+                        classname="input-control"
+                        placeholder="Enter your NIC Number"
+                        id="nic"
+                        value={nic}
+                        onChange={this.onChangeRegister}
+                        error={errors.nic}
+                        className={classnames('', {
+                          invalid: errors.nic
+                        })}
+                      />{' '}
+                      <br />
+                      <span className="text-danger">{errors.nic}</span>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-12">
+                      <label htmlFor="name">Phone No:</label> <br />
+                      <input
+                        type="text"
+                        classname="input-control"
+                        placeholder="Enter Valid Phone Number"
+                        id="pNo"
+                        value={pNo}
+                        onChange={this.onChangeRegister}
+                        error={errors.pNo}
+                        className={classnames('', {
+                          invalid: errors.pNo
+                        })}
+                      />{' '}
+                      <br />
+                      <span className="text-danger">{errors.pNo}</span>
                     </div>
                   </div>
                   <div class="form-row">

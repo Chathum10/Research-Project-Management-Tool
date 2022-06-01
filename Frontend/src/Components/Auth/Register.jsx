@@ -69,7 +69,7 @@ class Register extends Component {
               </div>
             </div>
             <div className="col-lg-6">
-              <div className="signup-right"><br /><br /><br />
+              <div className="signup-right"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                 <h1>Signup</h1>
                 <form noValidate onSubmit={this.registerSubmit}><br />
                 <div class="form-row">

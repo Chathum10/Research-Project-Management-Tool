@@ -16,6 +16,10 @@ import SupervisorDashboard from './Components/Dashboard/SupervisorDashboard';
 import CoSupervisorDashboard from './Components/Dashboard/CoSupervisorDashboard';
 import PannelMemberDashboard from './Components/Dashboard/PannelMemberDashboard';
 
+//Admin View
+import Users from './Components/AdminView/UserManagement/Users';
+import EditUser from './Components/AdminView/UserManagement/EditUser';
+
 import Register from './Components/Auth/Register';
 import Navbar from './Components/Navbar/Navbar';
 import NotFound from './Components/NotFound/NotFound';
@@ -59,6 +63,9 @@ function App() {
           <Route path="/Supervisorlogin" component={SupervisorLogin} />
           <Route path="/CoSupervisorlogin" component={CoSupervisorLogin} />
           <Route path="/PannelMemberlogin" component={PannelMemberLogin} />
+
+          <Route path="/userProfiles" component={Users} />
+          <Route path="/EditUser/:id" component={EditUser} />
 
           <Switch>
             <PrivateRoute exact path="/AdminDashboard" component={AdminDashboard} />

@@ -13,9 +13,9 @@ class LoginAs extends Component {
                 <h1>Login As</h1>
                 <button><a href="/Adminlogin">ADMIN</a></button>
                 <button><a href="/Studentlogin">STUDENT</a></button>
-                <button><a href="">SUPERVISOR</a></button>
-                <button><a href="">CO-SUPERVISOR</a></button>
-                <button><a href="">PANNEL MEMBER</a></button>
+                <button><a href="/Supervisorlogin">SUPERVISOR</a></button>
+                <button><a href="/CoSupervisorlogin">CO-SUPERVISOR</a></button>
+                <button><a href="/PannelMemberlogin">PANNEL MEMBER</a></button>
 
 
               </div>

@@ -6,9 +6,15 @@ import Home from './Components/Home/Home';
 import LoginAs from './Components/Auth/LoginAs';
 import AdminLogin from './Components/Auth/AdminLogin';
 import StudentLogin from './Components/Auth/StudentLogin';
+import SupervisorLogin from './Components/Auth/SupervisorLogin';
+import CoSupervisorLogin from './Components/Auth/CoSupervisorLogin';
+import PannelMemberLogin from './Components/Auth/PannelMemberLogin';
 
 import AdminDashboard from './Components/Dashboard/AdminDashboard';
-
+import StudentDashboard from './Components/Dashboard/StudentDashboard';
+import SupervisorDashboard from './Components/Dashboard/SupervisorDashboard';
+import CoSupervisorDashboard from './Components/Dashboard/CoSupervisorDashboard';
+import PannelMemberDashboard from './Components/Dashboard/PannelMemberDashboard';
 
 import Register from './Components/Auth/Register';
 import Navbar from './Components/Navbar/Navbar';
@@ -50,8 +56,16 @@ function App() {
 
           <Route path="/Adminlogin" component={AdminLogin} />
           <Route path="/Studentlogin" component={StudentLogin} />
+          <Route path="/Supervisorlogin" component={SupervisorLogin} />
+          <Route path="/CoSupervisorlogin" component={CoSupervisorLogin} />
+          <Route path="/PannelMemberlogin" component={PannelMemberLogin} />
+
           <Switch>
             <PrivateRoute exact path="/AdminDashboard" component={AdminDashboard} />
+            <PrivateRoute exact path="/StudentDashboard" component={StudentDashboard} />
+            <PrivateRoute exact path="/SupervisorDashboard" component={SupervisorDashboard} />
+            <PrivateRoute exact path="/CoSupervisorDashboard" component={CoSupervisorDashboard} />
+            <PrivateRoute exact path="/PannelMemberDashboard" component={PannelMemberDashboard} />
             <Route path="*" component={NotFound} />
           </Switch>
           <Route path="*" component={NotFound} />

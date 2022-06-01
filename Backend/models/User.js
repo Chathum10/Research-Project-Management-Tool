@@ -13,6 +13,22 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  userCategory: {
+    type: String,
+    required: true
+  },
+  regNo: {
+    type: String,
+    required: true
+  },
+  nic: {
+    type: String,
+    required: true
+  },
+  pNo: {
+    type: String,
+    required: true
+  },
   date: {
     type: Date,
     default: Date.now

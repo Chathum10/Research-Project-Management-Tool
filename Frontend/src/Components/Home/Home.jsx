@@ -13,23 +13,19 @@ class Home extends Component {
           <div className="row">
             <div className="col-lg-6">
               <div className="banner-left">
-                <h1 className="text-capitalize">
-                  Welcome to
-                  <span className="text-uppercase"> mern </span>
-                  stack Application
-                </h1>
+                
                 <div className="buttons">
                   <Link
                     to="/loginAs"
                     className="btn btn-lg btn-outline-none border-3 btn-login"
                   >
-                    Login
+                    Sign In
                   </Link>
                   <Link
                     to="/register"
                     className="btn btn-lg btn-outline-none border-3 btn-register"
                   >
-                    Signup
+                    Sign Up
                   </Link>
                 </div>
               </div>
@@ -37,13 +33,7 @@ class Home extends Component {
             <div className="col-lg-6">
               <div className="banner-right">
                 <h1 className="text-capitalize">
-                  <DiMongodb className="text-success" />
-                  <img
-                    src="https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg"
-                    alt="e"
-                  />
-                  <FaReact className="text-info" />
-                  <FaNodeJs className="text-success" />
+                  
                 </h1>
               </div>
             </div>

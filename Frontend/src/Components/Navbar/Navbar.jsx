@@ -9,7 +9,7 @@ class Navbar extends Component {
       <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <div className="container">
           <Link class="navbar-brand border-none" to="/">
-            MERN
+            SLIIT
           </Link>
           <button
             class="navbar-toggler d-lg-none"

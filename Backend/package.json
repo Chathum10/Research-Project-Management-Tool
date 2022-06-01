@@ -6,7 +6,6 @@
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js"
-    
   },
   "author": "Chathum Adhihetty, Pawani Perera, Pramoda Piyumali, Ashen Wijenayake",
   "license": "ISC",

@@ -20,6 +20,10 @@ import PannelMemberDashboard from './Components/Dashboard/PannelMemberDashboard'
 import Users from './Components/AdminView/UserManagement/Users';
 import EditUser from './Components/AdminView/UserManagement/EditUser';
 
+//Student View
+
+
+
 import Register from './Components/Auth/Register';
 import Navbar from './Components/Navbar/Navbar';
 import NotFound from './Components/NotFound/NotFound';

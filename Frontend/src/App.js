@@ -16,7 +16,7 @@ import SupervisorDashboard from './Components/Dashboard/SupervisorDashboard';
 import CoSupervisorDashboard from './Components/Dashboard/CoSupervisorDashboard';
 import PannelMemberDashboard from './Components/Dashboard/PannelMemberDashboard';
 
-//Admin View
+//Administrator View
 import Users from './Components/AdminView/UserManagement/Users';
 import EditUser from './Components/AdminView/UserManagement/EditUser';
 

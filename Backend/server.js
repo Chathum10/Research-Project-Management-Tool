@@ -1,11 +1,16 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const passport = require("passport");
+const dotenv = require("dotenv");
+const fileupload = require('express-fileupload');
+const cors = require("cors");
 
 const usersRouter = require("./routes/api/users");
 const userProfiles = require("./routes/userProfiles");
 
+dotenv.config();
 const config = require('config');
+const marksSupervisor = require("./models/marksSupervisor");
 const app = express();
 // Body parser middleware
 app.use(
@@ -14,6 +19,7 @@ app.use(
     })
 );
 app.use(express.json());
+app.use(cors());
 // DB Config
 const db = config.get('mongoURI');
 // Connect to MongoDB
@@ -33,6 +39,7 @@ require("./config/passport")(passport);
 // Routes
 app.use("/api/users", usersRouter);
 app.use(userProfiles);
+app.use("/marksSupervisor", require("./routes/marksSupervisor"));
 
 
 const port = process.env.PORT || 5000;

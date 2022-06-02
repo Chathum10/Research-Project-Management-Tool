@@ -31,6 +31,7 @@ class Dashboard extends Component {
                   Logout
                 </button>
                 <button><a href="/userProfiles">User Management</a></button>
+                <button><a href="/DocCategory">Document Management</a></button>
               </div>
             </div>
           </div>

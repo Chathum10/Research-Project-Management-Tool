@@ -3,7 +3,7 @@ const cloudinary = require("../utils/cloudinary");
 const multer  = require('multer')
 const uuid=require('uuid').v4;
 const path = require('path');
-const MarksSupervisor = require("../models/marksSupervisor");
+const Templates = require("../models/templates");
 
 const files=[];
 const fileInArray=[]
@@ -58,15 +58,15 @@ router.post("/", upload.array('uploaded_Image', 10), async (req, res) => {
      pdff = await cloudinary.uploader.upload(`${path.resolve(__dirname, "../uploads")}/${fileInArray[i][0]}`,{ pages: true });
    }
  
-    let marksSupervisor = new MarksSupervisor({
+    let templates = new Templates({
       name: req.body.name,
       description:req.body.description,
       pdf : pdff.secure_url,
       cloudinary_id_pdf: pdff.public_id,
     });
     
-    await marksSupervisor.save();
-    res.json(marksSupervisor);
+    await templates.save();
+    res.json(templates);
   } catch (err) {
     console.log(err);
   }
@@ -74,8 +74,8 @@ router.post("/", upload.array('uploaded_Image', 10), async (req, res) => {
 
 router.get("/", async (req, res) => {
   try {
-    let marksSupervisor = await MarksSupervisor.find();
-    res.json(marksSupervisor);
+    let templates = await Templates.find();
+    res.json(templates);
   } catch (err) {
     console.log(err);
   }
@@ -85,8 +85,8 @@ router.delete("/:id", async(req,res)=>{
  
   try {    
     const id=req.params.id;
-     let marksSupervisor = await MarksSupervisor.findByIdAndDelete(id);
-     res.json(marksSupervisor);
+     let templates = await Templates.findByIdAndDelete(id);
+     res.json(templates);
   } catch (err) {
     console.log(err)    
   }

@@ -22,11 +22,16 @@ import EditUser from './Components/AdminView/UserManagement/EditUser';
 
 import DocCategory from './Components/AdminView/DocumentManagement/DocCategory';
 import SupervisorDoc from './Components/AdminView/DocumentManagement/SupervisorDoc';
+import PannelMemberDoc from './Components/AdminView/DocumentManagement/PannelMemberDoc';
+import StudntDoc from './Components/AdminView/DocumentManagement/StudentDoc';
 
 //Student View
 
 //Supervisor View
 import DocMarking from './Components/SupervisorView/EvaluateDocuments/DocMarking';
+
+//Pannel Member View
+import VivaMarking from './Components/PannelMemberView/EvaluatePresentations/VivaMarking';
 
 import Register from './Components/Auth/Register';
 import Navbar from './Components/Navbar/Navbar';
@@ -72,14 +77,21 @@ function App() {
           <Route path="/CoSupervisorlogin" component={CoSupervisorLogin} />
           <Route path="/PannelMemberlogin" component={PannelMemberLogin} />
 
+          {/* Admin View */}
           <Route path="/userProfiles" component={Users} />
           <Route path="/EditUser/:id" component={EditUser} />
           <Route path="/DocCategory" component={DocCategory} />
           <Route path="/SupervisorDoc" component={SupervisorDoc} />
+          <Route path="/PannelMemberDoc" component={PannelMemberDoc} />
+          <Route path="/StudntDoc" component={StudntDoc} />
 
-
-
+          {/* Supervisor View */}
           <Route path="/DocMarking" component={DocMarking} />
+
+
+          {/* Pannel Member View */}
+          <Route path="/VivaMarking" component={VivaMarking} />
+          
           
 
           <Switch>

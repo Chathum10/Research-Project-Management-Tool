@@ -30,6 +30,7 @@ class Dashboard extends Component {
                 >
                   Logout
                 </button>
+                <button><a href="/SubTemplates">Subbmissions</a></button>
               </div>
             </div>
           </div>

@@ -26,12 +26,20 @@ import PannelMemberDoc from './Components/AdminView/DocumentManagement/PannelMem
 import StudntDoc from './Components/AdminView/DocumentManagement/StudentDoc';
 
 //Student View
+import SubTemplates from './Components/StudentView/DocSubbmissions/SubTemplates';
+import STopicRegDocs from './Components/StudentView/DocSubbmissions/STopicRegDocs';
+import UploadTRD from './Components/StudentView/DocSubbmissions/UploadTRD';
+import SFinalDocs from './Components/StudentView/DocSubbmissions/SFinalDocs';
+import UploadFinalDoc from './Components/StudentView/DocSubbmissions/UploadFinalDoc';
 
 //Supervisor View
 import DocMarking from './Components/SupervisorView/EvaluateDocuments/DocMarking';
+import SupervisorFDocs from './Components/SupervisorView/EvaluateDocuments/SupervisorFDocs';
 
 //Pannel Member View
 import VivaMarking from './Components/PannelMemberView/EvaluatePresentations/VivaMarking';
+import PTopicRegDocs from './Components/PannelMemberView/EvaluateDocuments/PTopicRegDocs';
+
 
 import Register from './Components/Auth/Register';
 import Navbar from './Components/Navbar/Navbar';
@@ -42,6 +50,9 @@ import jwt_decode from 'jwt-decode';
 import setAuthToken from './utils/setAuthToken';
 import { setCurrentUser, logoutUser } from './redux/actions/authActions';
 import PrivateRoute from './Components/private-route/PrivateRoute';
+
+
+
 
 
 
@@ -87,11 +98,19 @@ function App() {
 
           {/* Supervisor View */}
           <Route path="/DocMarking" component={DocMarking} />
-
+          <Route path="/SupervisorFDocs" component={SupervisorFDocs}/>
 
           {/* Pannel Member View */}
           <Route path="/VivaMarking" component={VivaMarking} />
+          <Route path="/PTopicRegDocs" component={PTopicRegDocs} />
           
+          
+          {/* Student View */}
+          <Route path="/SubTemplates" component={SubTemplates} />
+          <Route path="/STopicRegDocs" component={STopicRegDocs} />
+          <Route path="/UploadTRD" component={UploadTRD} />
+          <Route path="/SFinalDocs" component={SFinalDocs} />
+          <Route path="/UploadFinalDoc" component={UploadFinalDoc} />
           
 
           <Switch>
@@ -119,22 +138,3 @@ export default App;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//pawani

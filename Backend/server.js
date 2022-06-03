@@ -41,6 +41,8 @@ app.use(userProfiles);
 app.use("/marksSupervisor", require("./routes/marksSupervisor"));
 app.use("/marksPannel", require("./routes/marksPannel"));
 app.use("/templates", require("./routes/templates"));
+app.use("/topicRegDoc", require("./routes/topicRegDoc"));
+app.use("/finalDoc", require("./routes/finalDoc"));
 
 
 const port = process.env.PORT || 5000;

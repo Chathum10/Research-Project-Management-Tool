@@ -6,8 +6,8 @@ import { useEffect} from "react";
 import React from 'react'
 
 
-const SubTemplates = () => {
-    const [templates, setTemplates] = useState([]);
+const SupervisorFDocs = () => {
+    const [finalDoc, setFinalDoc] = useState([]);
     const [search, setSearch] = useState("");
     const [search2,setSearch2] = useState("")
    
@@ -16,9 +16,9 @@ const SubTemplates = () => {
 
     useEffect(() => {
         const fetchTemplates = async () => {
-          const res = await fetch(`http://localhost:3000/templates`);
+          const res = await fetch(`http://localhost:3000/finalDoc`);
           const data = await res.json();
-          setTemplates(data);
+          setFinalDoc(data);
           console.log("test", data);
         };
         fetchTemplates();
@@ -39,16 +39,16 @@ const SubTemplates = () => {
                       <thead>
                         <tr>
                           <th scope="col">Name</th>
-                          <th scope="col">description</th>
+                          <th scope="col">Date</th>
                           <th scope="col">Document</th>
                         </tr>
                         </thead>
                         <tbody>
-                          {templates.map((templates)=>
-                          <tr key={templates.id}>
-                            <td>{templates.name}</td>
-                            <td>{templates.description}</td>
-                            <td>{ <a href={templates.pdf} download>{templates.name}</a>}</td>
+                          {finalDoc.map((finalDoc)=>
+                          <tr key={finalDoc.id}>
+                            <td>{finalDoc.name}</td>
+                            <td>{finalDoc.date}</td>
+                            <td>{ <a href={finalDoc.pdf} download>{finalDoc.name}</a>}</td>
                           </tr>
 
                           )
@@ -60,8 +60,6 @@ const SubTemplates = () => {
 
                                          <br />   <br />   <br /> 
                   
-            <button><a href="/SFinalDocs">Upload Final Document</a></button>  <br />   <br /> 
-            <button><a href="/STopicRegDocs">Upload Topic Registration Document</a></button>
 
 
             </div>
@@ -78,4 +76,4 @@ const SubTemplates = () => {
   )
 }
 
-export default SubTemplates;
+export default SupervisorFDocs;

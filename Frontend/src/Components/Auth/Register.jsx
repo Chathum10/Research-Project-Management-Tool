@@ -234,7 +234,7 @@ class Register extends Component {
                     <div class="form-group col-md-12">
                       <p>
                         Already have an account ?
-                        <Link to="/login" className="text-success">
+                        <Link to="/loginAs" className="text-success">
                           Login
                         </Link>
                       </p>

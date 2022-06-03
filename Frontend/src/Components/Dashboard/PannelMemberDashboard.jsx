@@ -30,6 +30,7 @@ class Dashboard extends Component {
                 >
                   Logout
                 </button>
+                <button><a href="/VivaMarking">Final Presentation Evaluation</a></button>
               </div>
             </div>
           </div>

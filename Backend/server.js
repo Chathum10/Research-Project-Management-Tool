@@ -10,7 +10,7 @@ const userProfiles = require("./routes/userProfiles");
 
 dotenv.config();
 const config = require('config');
-const marksSupervisor = require("./models/marksSupervisor");
+//const marksSupervisor = require("./models/marksSupervisor");
 const app = express();
 // Body parser middleware
 app.use(
@@ -40,6 +40,7 @@ require("./config/passport")(passport);
 app.use("/api/users", usersRouter);
 app.use(userProfiles);
 app.use("/marksSupervisor", require("./routes/marksSupervisor"));
+app.use("/marksPannel", require("./routes/marksPannel"));
 
 
 const port = process.env.PORT || 5000;

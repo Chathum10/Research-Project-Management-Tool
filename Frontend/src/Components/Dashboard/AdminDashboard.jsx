@@ -33,6 +33,8 @@ class Dashboard extends Component {
                 </button>
                 <button><a href="/userProfiles">User Management</a></button>
                 <button><a href="/DocCategory">Document Management</a></button>
+                <button><a href="/RegisteredGroups">Student Group Management</a></button>
+                <button><a href="/PanelList">Pannel Management</a></button>
               </div>
             </div>
           </div>

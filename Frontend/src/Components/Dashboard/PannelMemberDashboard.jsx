@@ -32,6 +32,8 @@ class Dashboard extends Component {
                 </button>
                 <button><a href="/VivaMarking">Final Presentation Evaluation</a></button>
                 <button><a href="/PTopicRegDocs">Student Topic Registration Documents</a></button>
+                <button><a href="/PanelDetailsList">View My Panel</a></button>
+                <button><a href="/FinalTopicDetails">Accept/Reject Registered Topics</a></button>
               </div>
             </div>
           </div>

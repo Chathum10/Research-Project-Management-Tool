@@ -30,7 +30,8 @@ class Dashboard extends Component {
                 >
                   Logout
                 </button>
-                <button><a href="/DocMarking">Final Documents</a></button>
+                <button><a href="/DocMarking">Document Marking Schemes</a></button>
+                <button><a href="/SupervisorFDocs">Final Documents</a></button>
               </div>
             </div>
           </div>

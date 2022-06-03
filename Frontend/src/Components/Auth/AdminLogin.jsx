@@ -113,6 +113,16 @@ class Login extends Component {
                       </button>
                     </div>
                   </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-12">
+                      <p>
+                        Don't have an account ?
+                        <Link to="/register" className="text-success">
+                          Create one
+                        </Link>
+                      </p>
+                    </div>
+                  </div>
                 </form>
               </div>
             </div>

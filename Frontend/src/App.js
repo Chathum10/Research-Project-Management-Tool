@@ -31,6 +31,8 @@ import STopicRegDocs from './Components/StudentView/DocSubbmissions/STopicRegDoc
 import UploadTRD from './Components/StudentView/DocSubbmissions/UploadTRD';
 import SFinalDocs from './Components/StudentView/DocSubbmissions/SFinalDocs';
 import UploadFinalDoc from './Components/StudentView/DocSubbmissions/UploadFinalDoc';
+import STopics from './Components/StudentView/TopicRegistration/STopics';
+import RegisterTopic from './Components/StudentView/TopicRegistration/RegisterTopic';
 
 //Supervisor View
 import DocMarking from './Components/SupervisorView/EvaluateDocuments/DocMarking';
@@ -50,6 +52,11 @@ import jwt_decode from 'jwt-decode';
 import setAuthToken from './utils/setAuthToken';
 import { setCurrentUser, logoutUser } from './redux/actions/authActions';
 import PrivateRoute from './Components/private-route/PrivateRoute';
+import SupervisorViewTopics from './Components/SupervisorView/AcceptTopics/SupervisorViewTopics';
+import SupervisorReply from './Components/SupervisorView/AcceptTopics/SupervisorReply';
+import CSviewTopics from './Components/CoSupervisorView/AssignToGroup/CSviewTopics';
+import CSreply from './Components/CoSupervisorView/AssignToGroup/CSreply';
+
 
 
 
@@ -99,6 +106,8 @@ function App() {
           {/* Supervisor View */}
           <Route path="/DocMarking" component={DocMarking} />
           <Route path="/SupervisorFDocs" component={SupervisorFDocs}/>
+          <Route path="/SupervisorViewTopics" component={SupervisorViewTopics}/>
+          <Route path="/SupervisorReply/:id" component={SupervisorReply}/>
 
           {/* Pannel Member View */}
           <Route path="/VivaMarking" component={VivaMarking} />
@@ -111,7 +120,12 @@ function App() {
           <Route path="/UploadTRD" component={UploadTRD} />
           <Route path="/SFinalDocs" component={SFinalDocs} />
           <Route path="/UploadFinalDoc" component={UploadFinalDoc} />
+          <Route path="/STopics" component={STopics} />
+          <Route path="/RegisterTopic" component={RegisterTopic} />
           
+          {/* Co Supervisor View */}
+          <Route path="/CSviewTopics" component={CSviewTopics} />
+          <Route path="/CSreply/:id" component={CSreply} />
 
           <Switch>
             <PrivateRoute exact path="/AdminDashboard" component={AdminDashboard} />

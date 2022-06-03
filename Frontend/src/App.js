@@ -23,6 +23,7 @@ import EditUser from './Components/AdminView/UserManagement/EditUser';
 import DocCategory from './Components/AdminView/DocumentManagement/DocCategory';
 import SupervisorDoc from './Components/AdminView/DocumentManagement/SupervisorDoc';
 import PannelMemberDoc from './Components/AdminView/DocumentManagement/PannelMemberDoc';
+import StudntDoc from './Components/AdminView/DocumentManagement/StudentDoc';
 
 //Student View
 
@@ -82,7 +83,7 @@ function App() {
           <Route path="/DocCategory" component={DocCategory} />
           <Route path="/SupervisorDoc" component={SupervisorDoc} />
           <Route path="/PannelMemberDoc" component={PannelMemberDoc} />
-          
+          <Route path="/StudntDoc" component={StudntDoc} />
 
           {/* Supervisor View */}
           <Route path="/DocMarking" component={DocMarking} />

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Auth.css';
+import './loginas.css';
 import { connect } from 'react-redux';
 import { loginUser } from '../../redux/actions/authActions';
 
@@ -8,9 +9,9 @@ class LoginAs extends Component {
  
   render() {
     return (
-      
-            <div className="col-lg-6">
-              <div className="login-right">
+      <div  id="banner2">
+            <div className="col-lg-6" >
+              <div className="login-right" >
                 
                 <button><a href="/Adminlogin">ADMIN</a></button>
                 <button><a href="/Studentlogin">STUDENT</a></button>
@@ -22,7 +23,7 @@ class LoginAs extends Component {
               </div>
             </div>
 
-
+</div>
     );
   }
 }

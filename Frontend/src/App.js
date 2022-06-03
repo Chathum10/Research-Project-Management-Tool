@@ -26,12 +26,14 @@ import PannelMemberDoc from './Components/AdminView/DocumentManagement/PannelMem
 import StudntDoc from './Components/AdminView/DocumentManagement/StudentDoc';
 
 //Student View
+import SubTemplates from './Components/StudentView/DocSubbmissions/SubTemplates';
 
 //Supervisor View
 import DocMarking from './Components/SupervisorView/EvaluateDocuments/DocMarking';
 
 //Pannel Member View
 import VivaMarking from './Components/PannelMemberView/EvaluatePresentations/VivaMarking';
+
 
 import Register from './Components/Auth/Register';
 import Navbar from './Components/Navbar/Navbar';
@@ -42,6 +44,7 @@ import jwt_decode from 'jwt-decode';
 import setAuthToken from './utils/setAuthToken';
 import { setCurrentUser, logoutUser } from './redux/actions/authActions';
 import PrivateRoute from './Components/private-route/PrivateRoute';
+
 
 
 
@@ -92,6 +95,8 @@ function App() {
           {/* Pannel Member View */}
           <Route path="/VivaMarking" component={VivaMarking} />
           
+          {/* Student View */}
+          <Route path="/SubTemplates" component={SubTemplates} />
           
 
           <Switch>

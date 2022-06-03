@@ -10,7 +10,7 @@ class DocCategory extends Component {
                 <h1>Upload Documents TO</h1>
                 <button><a href="#">STUDENT</a></button>
                 <button><a href="/SupervisorDoc">SUPERVISOR</a></button>
-                <button><a href="#">PANNEL MEMBER</a></button>
+                <button><a href="/PannelMemberDoc">PANNEL MEMBER</a></button>
 
 
               </div>

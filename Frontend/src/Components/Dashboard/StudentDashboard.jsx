@@ -32,6 +32,7 @@ class Dashboard extends Component {
                 </button>
                 <button><a href="/SubTemplates">Subbmissions</a></button>
                 <button><a href="/STopics">Topic Registration</a></button>
+                <button><a href="/GroupList">Group Registration</a></button>
               </div>
             </div>
           </div>

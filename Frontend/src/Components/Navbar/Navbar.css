@@ -1,13 +1,12 @@
 nav {
-    background: rgb(11, 13, 15) !important;
+    background: white !important;
     font-family: var(--Oswald);
     letter-spacing: 1px;
 }
 .navbar-brand {
     font-weight: bolder;
-    letter-spacing: 10px;
-    background-image: url('../images/sliit.jpg');
-    
+    letter-spacing: 35px;
+    background-image: url('../images/logoS.png');
 }
 
 .nav-item .btn {

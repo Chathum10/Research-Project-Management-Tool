@@ -7,6 +7,10 @@ const cors = require("cors");
 
 const usersRouter = require("./routes/api/users");
 const userProfiles = require("./routes/userProfiles");
+const topicRoutes = require("./routes/topics");
+const groupRoutes = require("./routes/groups");
+const panelRoutes = require("./routes/panels");
+
 
 dotenv.config();
 const config = require('config');
@@ -38,6 +42,9 @@ require("./config/passport")(passport);
 // Routes
 app.use("/api/users", usersRouter);
 app.use(userProfiles);
+app.use(topicRoutes);
+app.use(groupRoutes);
+app.use(panelRoutes);
 app.use("/marksSupervisor", require("./routes/marksSupervisor"));
 app.use("/marksPannel", require("./routes/marksPannel"));
 app.use("/templates", require("./routes/templates"));

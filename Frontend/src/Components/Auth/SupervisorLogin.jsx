@@ -48,6 +48,7 @@ class Login extends Component {
   render() {
     const { email, password, errors } = this.state;
     return (
+      <div  id="banner3">
       <section className="login">
         <div className="container">
           <div className="row">
@@ -119,6 +120,7 @@ class Login extends Component {
           </div>
         </div>
       </section>
+      </div>
     );
   }
 }

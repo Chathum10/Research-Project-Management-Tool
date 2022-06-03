@@ -56,11 +56,16 @@ import SupervisorViewTopics from './Components/SupervisorView/AcceptTopics/Super
 import SupervisorReply from './Components/SupervisorView/AcceptTopics/SupervisorReply';
 import CSviewTopics from './Components/CoSupervisorView/AssignToGroup/CSviewTopics';
 import CSreply from './Components/CoSupervisorView/AssignToGroup/CSreply';
-
-
-
-
-
+import GroupList from './Components/StudentView/GroupRegistration/GroupList';
+import GroupRegister from './Components/StudentView/GroupRegistration/GroupRegister';
+import RegisteredGroups from './Components/AdminView/StudentGroupManagement/RegisteredGroups';
+import AssignPanel from './Components/AdminView/StudentGroupManagement/AssignPanel';
+import PanelList from './Components/AdminView/PannelManagement/PanelList';
+import EditPanelList from './Components/AdminView/PannelManagement/EditPanelList';
+import CreatePanel from './Components/AdminView/PannelManagement/CreatePanel';
+import PanelDetailsList from './Components/PannelMemberView/ViewPanel/PanelDetailsList';
+import FinalTopicDetails from './Components/PannelMemberView/AcceptTopics/FinalTopicDetails';
+import Feedback from './Components/PannelMemberView/AcceptTopics/Feedback';
 
 
 function App() {
@@ -102,6 +107,14 @@ function App() {
           <Route path="/SupervisorDoc" component={SupervisorDoc} />
           <Route path="/PannelMemberDoc" component={PannelMemberDoc} />
           <Route path="/StudntDoc" component={StudntDoc} />
+          <Route path="/RegisteredGroups" component={RegisteredGroups} />
+          <Route path="/AssignPanel/:id" component={AssignPanel} />
+          <Route path="/PanelList" component={PanelList} />
+          <Route path="/EditPanelList/:id" component={EditPanelList} />
+          <Route path="/CreatePanel" component={CreatePanel} />
+        
+
+
 
           {/* Supervisor View */}
           <Route path="/DocMarking" component={DocMarking} />
@@ -112,6 +125,9 @@ function App() {
           {/* Pannel Member View */}
           <Route path="/VivaMarking" component={VivaMarking} />
           <Route path="/PTopicRegDocs" component={PTopicRegDocs} />
+          <Route path="/PanelDetailsList" component={PanelDetailsList} />
+          <Route path="/FinalTopicDetails" component={FinalTopicDetails} />
+          <Route path="/Feedback/:id" component={Feedback} />
           
           
           {/* Student View */}
@@ -122,6 +138,10 @@ function App() {
           <Route path="/UploadFinalDoc" component={UploadFinalDoc} />
           <Route path="/STopics" component={STopics} />
           <Route path="/RegisterTopic" component={RegisterTopic} />
+          <Route path="/GroupList" component={GroupList} />
+          <Route path="/GroupRegister" component={GroupRegister} />
+
+
           
           {/* Co Supervisor View */}
           <Route path="/CSviewTopics" component={CSviewTopics} />

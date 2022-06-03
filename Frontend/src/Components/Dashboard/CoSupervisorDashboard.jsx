@@ -30,6 +30,7 @@ class Dashboard extends Component {
                 >
                   Logout
                 </button>
+                <button><a href="/CSviewTopics">Assign To A Group</a></button>
               </div>
             </div>
           </div>

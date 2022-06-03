@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Auth.css';
+import './register.css';
 import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -57,20 +58,18 @@ class Register extends Component {
   render() {
     const { errors, name, password, password2, email, userCategory, regNo, nic, pNo} = this.state;
     return (
-      <section className="register">
+      <section className="register" id="banner1">
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
               <div className="signup-left">
-                <h4 className="text-capitalize">
-                  To Register With Our Application You should must Put Your Own
-                  mongoURI Id in the <kbd>config/default.json</kbd>
-                </h4>
+                
               </div>
             </div>
             <div className="col-lg-6">
               <div className="signup-right"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                <h1>Signup</h1>
+              <br /><br />
+              <h1>Signup</h1>
                 <form noValidate onSubmit={this.registerSubmit}><br />
                 <div class="form-row">
                     <div class="form-group col-md-12">

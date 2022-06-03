@@ -1,16 +1,15 @@
-/** =================banner====================*/
-#banner {
-    background-image: url('../images/HOME.png');
+#banner1 {
+    background-image: url('../images/register.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 150vh;
     width: 100%;
-    color:blueviolet !important;
+    color:#92a8d1 !important;
     position: relative;
 }
 
-#banner::after {
+#banner1::after {
     position: absolute;
     content: '';
     top: 0;
@@ -21,19 +20,19 @@
     
 }
 
-.banner-left,
-.banner-right {
+.banner1-left,
+.banner1-right {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 60%;
-    height: 100vh;
+    height: 130vh;
     position: relative;
     z-index: 2;
 }
 
-.banner-right {
+.banner1-right {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,24 +43,14 @@
     z-index: 2;
 }
 
-.banner-right h1 {
+.banner1-right h1 {
     font-size: 5rem;
 }
 
-.banner-right h1 img {
+.banner1-right h1 img {
     width: 5rem;
 }
 
-.banner-left h1 {
+.banner1-left h1 {
     font-weight: bolder;
-}
-
-.buttons .btn {
-    padding: 10px 35px;
-    margin: 50px 20px 0px 0px !important;
-}
-
-.buttons .btn-github {
-    background-color: bisque;
-    color: #000000 !important;
 }

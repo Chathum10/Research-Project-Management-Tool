@@ -8,6 +8,26 @@
     color:#034f84 !important;
     position: relative;
 }
+#bannerA {
+    background-image: url('../images/logA.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    color:#034f84 !important;
+    position: relative;
+}
+#bannerP {
+    background-image: url('../images/logP.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    color:#034f84 !important;
+    position: relative;
+}
 
 .login {
     width: 100%;

@@ -48,8 +48,8 @@ class Login extends Component {
   render() {
     const { email, password, errors } = this.state;
     return (
-      <div  id="banner3">
-      <section className="login" id="banner3">
+      <div  id="bannerA">
+      <section className="login" id="bannerA">
         <div className="container">
           <div className="row">
             <div className="col-lg-6">

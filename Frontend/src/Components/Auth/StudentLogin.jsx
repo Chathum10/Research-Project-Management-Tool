@@ -50,7 +50,7 @@ class Login extends Component {
     const { email, password, errors } = this.state;
     return (
       <div  id="bannerS">
-      <section className="login">
+      <section className="login" id="bannerS">
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
@@ -61,6 +61,7 @@ class Login extends Component {
             </div>
             <div className="col-lg-6">
               <div className="login-right">
+                <br></br><br></br><br></br>
                 <h1>Student Login</h1>
                 <form noValidate onSubmit={this.loginSubmit}>
                   <div class="form-row">

@@ -87,8 +87,9 @@ export default class CSreply extends Component {
   render() {
     return (
       <div className="col-md-8 mt-4 mx-auto">
+        <br /> <br /> <br />
         <h1>Assign Co-Supervisors</h1>
-
+        <br />
         <form className="needs-validation" noValidate>
           <div className="form-group" style={{ marginBottom: "15px" }}>
             <label style={{ marginBottom: "5px" }}>Group ID</label>
@@ -147,7 +148,6 @@ export default class CSreply extends Component {
               onChange={this.handleInputChange}
             />
           </div>
-
           <div className="form-group" style={{ marginBottom: "15px" }}>
             <label style={{ marginBottom: "5px" }}>Brief Description</label>
             <input
@@ -160,7 +160,6 @@ export default class CSreply extends Component {
               onChange={this.handleInputChange}
             />
           </div>
-
           <div className="form-group" style={{ marginBottom: "15px" }}>
             <label style={{ marginBottom: "5px" }}>Status</label>
             <input
@@ -173,7 +172,6 @@ export default class CSreply extends Component {
               onChange={this.handleInputChange}
             />
           </div>
-
           <div className="form-group" style={{ marginBottom: "15px" }}>
             <label style={{ marginBottom: "5px" }}>Supervisor's Name</label>
             <input
@@ -186,7 +184,6 @@ export default class CSreply extends Component {
               onChange={this.handleInputChange}
             />
           </div>
-
           <div className="form-group" style={{ marginBottom: "15px" }}>
             <label style={{ marginBottom: "5px" }}>Co-Supervisor's Name</label>
             <input
@@ -198,16 +195,16 @@ export default class CSreply extends Component {
               onChange={this.handleInputChange}
             />
           </div>
-
           <button
-            className="btn btn-success"
+            
             type="submit"
             style={{ marginTop: "15px" }}
             onClick={this.onSubmit}
           >
-            <i className="far far-check-square"></i>
-            &nbsp; Assign
+           
+           Assign
           </button>
+          <br /> <br />
         </form>
       </div>
     );

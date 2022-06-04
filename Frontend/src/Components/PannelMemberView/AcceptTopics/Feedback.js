@@ -100,6 +100,7 @@ export default class Feedback extends Component {
   render() {
     return (
       <div className="col-md-8 mt-4 mx-auto">
+        <br/><br/>
         <h1>Assign Co-Supervisors</h1>
 
         <form className="needs-validation" noValidate>
@@ -226,15 +227,14 @@ export default class Feedback extends Component {
           </div>
 
           <button
-            className="btn btn-success"
             type="submit"
             style={{ marginTop: "15px" }}
             onClick={this.onSubmit}
           >
-            <i className="far far-check-square"></i>
             &nbsp; Publish
           </button>
         </form>
+        <br/><br/>
       </div>
     );
   }

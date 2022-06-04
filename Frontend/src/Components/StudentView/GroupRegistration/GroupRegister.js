@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-
+import Card from 'react-bootstrap/Card';
 export default class GroupRegister extends Component {
   constructor(props) {
     super(props);
@@ -53,18 +53,23 @@ export default class GroupRegister extends Component {
 
   render() {
     return (
-      <div className="back fixed" style={{ zIndex: 8 }}>
-        <div className="col-md-8 mt-4 mx-auto">
-          <br /> <br />
-          <center>
-            <h1>
-              <span>Create a group</span>
-            </h1>
-          </center>
-          <center>
-            <br />
-            <div className="col-md-8 mt-4 mx-auto">
-              <br />
+      <div className="back fixed" style={{ zIndex: 8 }}><br />
+      <div className="com-md-8 mt-4 mx-auto"></div>
+      <br /> <br />
+                   <center><h1>Create New Group</h1></center>
+                   <center>
+                   <br />
+                   {[
+   'Secondary',
+ ].map((variant) => (
+                       <Card       bg={variant.toLowerCase()}
+                       key={variant}
+                       text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
+                       style={{ width: '40rem' }}
+                       className="mb-2">
+
+                           <div className="col-md-8 mt-4 mx-auto">
+                               <br />
               <form className="needs-validation" noValidate>
                 <div className="form-group" style={{ marginBottom: "15px" }}>
                   <label style={{ marginBottom: "5px" }}>
@@ -139,18 +144,23 @@ export default class GroupRegister extends Component {
                   />
                 </div>
                 <button
+                  className="btn btn-success"
                   type="submit"
                   style={{ marginTop: "15px" }}
                   onClick={this.onSubmit}
                 >
                   &nbsp; Register this group
-                </button>
-                <br /> <br /> <br />
-              </form>
-            </div>
-          </center>
-        </div>
+                  </button>
+          <br /> <br /> <br />
+        </form>
       </div>
+      </Card>
+  ))}
+   <br /> <br /> <br /> <br />
+                    </center>
+                     </div>
+
+                     
     );
   }
 }

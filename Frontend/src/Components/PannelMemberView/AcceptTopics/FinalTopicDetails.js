@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Table from "react-bootstrap/Table";
-import Button from "react-bootstrap/Button";
 
 export default class FinalTopicDetails extends Component {
   constructor(props) {
@@ -48,15 +46,9 @@ export default class FinalTopicDetails extends Component {
 
   render() {
     return (
-      <div>
-        <br /> <br /> <br />
-        <div id="containerJoin">
-          <center>
-            <h1>Topic Details</h1>
-          </center>
-        </div>
-        <div style={{ marginTop: 20 }} className="container">
-          <div style={{ width: "20%", marginLeft: "80%" }}>
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-3 mt-2 mb-2">
             <input
               className="form-control"
               type="searh"
@@ -66,12 +58,11 @@ export default class FinalTopicDetails extends Component {
             ></input>
           </div>
         </div>
-        <br />
-        <br />
-        <Table striped>
+
+        <table className="table">
           <thead>
             <tr>
-              <th s>#</th>
+              <th scope="col">#</th>
               <th>Group ID</th>
               <th>Research Area</th>
               <th>Topic</th>
@@ -87,7 +78,7 @@ export default class FinalTopicDetails extends Component {
           <tbody>
             {this.state.topics.map((topics, index) => (
               <tr key={index}>
-                <th>{index + 1}</th>
+                <th scope="row">{index + 1}</th>
                 <td>{topics.gid}</td>
                 <td>{topics.area}</td>
                 <td>{topics.name}</td>
@@ -98,15 +89,12 @@ export default class FinalTopicDetails extends Component {
                 <td>{topics.csName}</td>
                 <td>{topics.feedback}</td>
                 <td>
-                  <Button variant="warning" size="sm">
-                    <a href={`/Feedback/${topics._id}`}>Feedback</a>
-                    &nbsp;
-                  </Button>
+                  <a href={`/Feedback/${topics._id}`}>Feedback</a>
                 </td>
               </tr>
             ))}
           </tbody>
-        </Table>
+        </table>
       </div>
     );
   }

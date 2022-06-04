@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Card from 'react-bootstrap/Card';
 
 export default class SupervisorReply extends Component {
   constructor(props) {
@@ -84,26 +83,14 @@ export default class SupervisorReply extends Component {
 
   render() {
     return (
-      <div className="back fixed" style={{ zIndex: 8 }}><br />
-       <div className="com-md-8 mt-4 mx-auto"></div>
-       <br /> <br />
-                    <center><h1>Topic Details</h1></center>
-                    <center>
-                    <br />
-                    {[
-    'Secondary',
-  ].map((variant) => (
-                        <Card       bg={variant.toLowerCase()}
-                        key={variant}
-                        text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
-                        style={{ width: '40rem' }}
-                        className="mb-2">
+      <div className="col-md-8 mt-4 mx-auto">
+        <br />
+        <br />
+        <h1 className="h3 mb-3 font-weight-normal">Topic Details</h1>
 
-                            <div className="col-md-8 mt-4 mx-auto">
-                                <br />
         <form className="needs-validation" noValidate>
           <div className="form-group" style={{ marginBottom: "15px" }}>
-            <label style={{ marginBottom: "5px" }}><b>Group ID</b></label>
+            <label style={{ marginBottom: "5px" }}>Group ID</label>
             <input
               disabled
               type="text"
@@ -115,7 +102,7 @@ export default class SupervisorReply extends Component {
             />
 
             <div className="form-group" style={{ marginBottom: "15px" }}>
-              <label style={{ marginBottom: "5px" }}><b>Research Area</b></label>
+              <label style={{ marginBottom: "5px" }}>Research Area</label>
               <select
                 disabled
                 name="area"
@@ -148,7 +135,7 @@ export default class SupervisorReply extends Component {
             </div>
           </div>
           <div className="form-group" style={{ marginBottom: "15px" }}>
-            <label style={{ marginBottom: "5px" }}><b>Sub Topic</b></label>
+            <label style={{ marginBottom: "5px" }}>Sub Topic</label>
             <input
               disabled
               type="text"
@@ -161,7 +148,7 @@ export default class SupervisorReply extends Component {
           </div>
 
           <div className="form-group" style={{ marginBottom: "15px" }}>
-            <label style={{ marginBottom: "5px" }}><b>Brief Description</b></label>
+            <label style={{ marginBottom: "5px" }}>Brief Description</label>
             <input
               disabled
               type="text"
@@ -174,7 +161,7 @@ export default class SupervisorReply extends Component {
           </div>
 
           <div className="form-group" style={{ marginBottom: "15px" }}>
-            <label style={{ marginBottom: "5px" }}><b>Status</b></label>
+            <label style={{ marginBottom: "5px" }}>Status</label>
             <br />
             <input
               required
@@ -203,10 +190,9 @@ export default class SupervisorReply extends Component {
             &nbsp;&nbsp;
           </div>
 
-
         
           <div className="form-group" style={{ marginBottom: "15px" }}>
-            <label style={{ marginBottom: "5px" }}><b>Comments</b></label>
+            <label style={{ marginBottom: "5px" }}>Comments</label>
             <input
               type="text"
               className="form-control"
@@ -218,7 +204,7 @@ export default class SupervisorReply extends Component {
           </div>
 
           <div className="form-group" style={{ marginBottom: "15px" }}>
-            <label style={{ marginBottom: "5px" }}><b>Supervisor's Name</b></label>
+            <label style={{ marginBottom: "5px" }}>Supervisor's Name</label>
             <input
               required
               type="text"
@@ -231,23 +217,14 @@ export default class SupervisorReply extends Component {
           </div>
 
           <button
-          className="btn btn-success"
             type="submit"
             style={{ marginTop: "15px" }}
             onClick={this.onSubmit}
           >
             &nbsp;Publish
-            </button>
-          <br /> <br /> <br />
+          </button>
         </form>
       </div>
-      </Card>
-  ))}
-   <br /> <br /> <br /> <br />
-                    </center>
-                     </div>
-
-                     
     );
   }
 }

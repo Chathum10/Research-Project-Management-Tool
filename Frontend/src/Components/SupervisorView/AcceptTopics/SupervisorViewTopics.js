@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Table from "react-bootstrap/Table";
-import Button from "react-bootstrap/Button";
+
 export default class SupervisorViewTopics extends Component {
   constructor(props) {
     super(props);
@@ -49,16 +48,15 @@ export default class SupervisorViewTopics extends Component {
 
   render() {
     return (
-      <div >
-         <br /> <br /> <br />
-        <div id="containerJoin">
-          <center>
-            <h1>Topic Status</h1>
-          </center>
+      <div className="container">
+        <br />
+        <br />
+        <br />
+        <div className="row">
+          <div className="col-lg-9 mt-2 mb-2">
+            <h4>Topic Status</h4>
           </div>
-          <div style={{ marginTop: 20 }} className="container">
-          <div style={{ width: "20%", marginLeft: "80%" }}>
-            
+          <div className="col-lg-3 mt-2 mb-2">
             <input
               className="form-control"
               type="searh"
@@ -68,12 +66,11 @@ export default class SupervisorViewTopics extends Component {
             ></input>
           </div>
         </div>
-        <br />
-        <br />
-        <Table striped>
+
+        <table className="table">
           <thead>
             <tr>
-              <th >#</th>
+              <th scope="col">#</th>
               <th>Group ID</th>
               <th>Research Area</th>
               <th>Topic</th>
@@ -87,7 +84,7 @@ export default class SupervisorViewTopics extends Component {
           <tbody>
             {this.state.topics.map((topics, index) => (
               <tr key={index}>
-                <th >{index + 1}</th>
+                <th scope="row">{index + 1}</th>
                 <td>{topics.gid}</td>
                 <td>{topics.area}</td>
                 <td>{topics.name}</td>
@@ -97,15 +94,13 @@ export default class SupervisorViewTopics extends Component {
                 <td>{topics.sName}</td>
 
                 <td>
-                <Button variant="warning" size="sm">
                   <a href={`/SupervisorReply/${topics._id}`}>&nbsp;Reply</a>
                   &nbsp;
-                  </Button>
                 </td>
               </tr>
             ))}
           </tbody>
-        </Table>
+        </table>
       </div>
     );
   }

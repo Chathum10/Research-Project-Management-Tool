@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Table from 'react-bootstrap/Table';
+import { FaEdit, FaTrash } from 'react-icons/fa';
 
 export default class Users extends Component {
   constructor(props) {
@@ -115,13 +116,13 @@ export default class Users extends Component {
                   <td>{User.userCategory}</td>
 
                   <td class="table-light">
-                    <a className="btn btn-warning" href={`/EditUser/${User._id}`}>
-                      <i className="fas fa-edit"></i>&nbsp;Edit
+                    <a className="btn btn-primary" href={`/EditUser/${User._id}`}>
+                      <FaEdit/>&nbsp;
                     </a>
                     &nbsp;
 
                     <a className="btn btn-danger" href="#" onClick={() => window.confirm("Are You Sure You Want To Delete This User Profile ?") && this.onDelete(User._id)}>
-                      <i className="far fa-trash-alt"></i>&nbsp;Delete
+                    <FaTrash/>&nbsp;
                     </a>
                   </td>
                 </tr>

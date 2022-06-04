@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
+import { FaArrowAltCircleLeft } from 'react-icons/fa'
 export default class SupervisorViewTopics extends Component {
   constructor(props) {
     super(props);
@@ -50,15 +51,22 @@ export default class SupervisorViewTopics extends Component {
   render() {
     return (
       <div >
-         <br /> <br /> <br />
+        <br /><br /><br />
+        <table width="100%" id="tble" >
+          <Button variant="warning" href="/SupervisorDashboard">
+            <FaArrowAltCircleLeft /> &nbsp;
+            Dashboard
+          </Button>
+        </table>
+        <br />
         <div id="containerJoin">
           <center>
             <h1>Topic Status</h1>
           </center>
-          </div>
-          <div style={{ marginTop: 20 }} className="container">
+        </div>
+        <div style={{ marginTop: 20 }} className="container">
           <div style={{ width: "20%", marginLeft: "80%" }}>
-            
+
             <input
               className="form-control"
               type="searh"
@@ -97,9 +105,9 @@ export default class SupervisorViewTopics extends Component {
                 <td>{topics.sName}</td>
 
                 <td>
-                <Button variant="warning" size="sm">
-                  <a href={`/SupervisorReply/${topics._id}`}>&nbsp;Reply</a>
-                  &nbsp;
+                  <Button variant="warning" size="sm">
+                    <a href={`/SupervisorReply/${topics._id}`}>&nbsp;Reply</a>
+                    &nbsp;
                   </Button>
                 </td>
               </tr>

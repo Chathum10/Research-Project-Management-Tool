@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Button from 'react-bootstrap/Button';
+import { FaArrowAltCircleLeft } from 'react-icons/fa'
 
 export default class SChatManagement extends Component {
   constructor(props) {
@@ -48,7 +49,17 @@ export default class SChatManagement extends Component {
 
   render() {
     return (
+      <div>
+                          <br /><br /><br />
+      <table width="100%" id="tble" >
+        <Button variant="warning" href="/SupervisorDashboard">
+          <FaArrowAltCircleLeft /> &nbsp;
+          Dashboard
+        </Button>
+      </table>
+      <br />
       <div className="container">
+
         <div className="row">
           <div className="col-lg-9 mt-2 mb-2">
             <h4>Topic List</h4>
@@ -95,7 +106,7 @@ export default class SChatManagement extends Component {
 
                 <td>{topics.cId}</td>
                 <td>
-                <Button variant="warning" href="/ChatApp" >
+                <Button variant="success" href="/ChatApp" >
                 <b>To Chat Room</b>
               </Button>
                 </td>
@@ -103,6 +114,7 @@ export default class SChatManagement extends Component {
             ))}
           </tbody>
         </table>
+      </div>
       </div>
     );
   }

@@ -67,7 +67,7 @@
   
    #foot{
     position: relative;
-    top: 15px;
+    top: 1px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -75,7 +75,7 @@
     border: none;
     padding: 15px;
     border-radius: 15px;
-    box-shadow: 0 0 8px #d9d4e7;
+    box-shadow: 0 0 1px   #d9d4e7;
     width: 200px;
     height: 65px;
     background-color: #d9d4e7;
@@ -92,9 +92,9 @@
       bottom: 0;
       margin: auto;
       background-color: #f9f8fc;
-      border: 2.5px solid #0e172c;
+      border: 2.5px solid wheat;
       transition: background-color 2.2s;
-      transition-duration: 3s;
+      transition-duration: 1s;
       transition: 0.5s;
     }
     

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-
+import '../../Background/background.css';
 export default class CreatePanel extends Component {
   constructor(props) {
     super(props);
@@ -52,6 +52,7 @@ export default class CreatePanel extends Component {
 
   render() {
     return (
+      <div class="dashboard">
       <div>
         <h1>Create New Panel</h1>
         <form className="needs-validation" noValidate>
@@ -123,6 +124,7 @@ export default class CreatePanel extends Component {
             &nbsp; Create Panel
           </button>
         </form>
+      </div>
       </div>
     );
   }

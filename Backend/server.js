@@ -1,12 +1,19 @@
 const express = require("express");
-
 const mongoose = require("mongoose");
 const passport = require("passport");
 const dotenv = require("dotenv");
 const cors = require("cors");
+
+
+const usersRouter = require("./routes/api/users");
+const userProfiles = require("./routes/userProfiles");
+const topicRoutes = require("./routes/topics");
+const groupRoutes = require("./routes/groups");
+const panelRoutes = require("./routes/panels");
+
+//Chat System Routes {
 const http = require("http");
 const { Server } = require("socket.io");
-
 
 const server = http.createServer();
 
@@ -37,12 +44,7 @@ server.listen(3001, () => {
   console.log("SERVER RUNNING");
 });
 
-const usersRouter = require("./routes/api/users");
-const userProfiles = require("./routes/userProfiles");
-const topicRoutes = require("./routes/topics");
-const groupRoutes = require("./routes/groups");
-const panelRoutes = require("./routes/panels");
-
+//Chat System Routes }
 
 dotenv.config();
 const config = require('config');
@@ -77,6 +79,8 @@ app.use(userProfiles);
 app.use(topicRoutes);
 app.use(groupRoutes);
 app.use(panelRoutes);
+
+//Doc Download & Uploads Routes(APIS)
 app.use("/marksSupervisor", require("./routes/marksSupervisor"));
 app.use("/marksPannel", require("./routes/marksPannel"));
 app.use("/templates", require("./routes/templates"));

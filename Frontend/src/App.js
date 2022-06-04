@@ -1,14 +1,25 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from './Components/Home/Home';
 
+import Home from './Components/Home/Home';
 import LoginAs from './Components/Auth/LoginAs';
 import AdminLogin from './Components/Auth/AdminLogin';
 import StudentLogin from './Components/Auth/StudentLogin';
 import SupervisorLogin from './Components/Auth/SupervisorLogin';
 import CoSupervisorLogin from './Components/Auth/CoSupervisorLogin';
 import PannelMemberLogin from './Components/Auth/PannelMemberLogin';
+import Register from './Components/Auth/Register';
 
+import Navbar from './Components/Navbar/Navbar';
+import NotFound from './Components/NotFound/NotFound';
+import { Provider } from 'react-redux';
+import store from './redux/store';
+import jwt_decode from 'jwt-decode';
+import setAuthToken from './utils/setAuthToken';
+import { setCurrentUser, logoutUser } from './redux/actions/authActions';
+import PrivateRoute from './Components/private-route/PrivateRoute';
+
+//Dashboard
 import AdminDashboard from './Components/Dashboard/AdminDashboard';
 import StudentDashboard from './Components/Dashboard/StudentDashboard';
 import SupervisorDashboard from './Components/Dashboard/SupervisorDashboard';
@@ -23,6 +34,13 @@ import SupervisorDoc from './Components/AdminView/DocumentManagement/SupervisorD
 import PannelMemberDoc from './Components/AdminView/DocumentManagement/PannelMemberDoc';
 import StudntDoc from './Components/AdminView/DocumentManagement/StudentDoc';
 import ViewRoles from './Components/AdminView/UserManagement/ViewRoles';
+import RegisteredGroups from './Components/AdminView/StudentGroupManagement/RegisteredGroups';
+import AssignPanel from './Components/AdminView/StudentGroupManagement/AssignPanel';
+import PanelList from './Components/AdminView/PannelManagement/PanelList';
+import EditPanelList from './Components/AdminView/PannelManagement/EditPanelList';
+import CreatePanel from './Components/AdminView/PannelManagement/CreatePanel';
+import ChatManagement from './Components/AdminView/ChatManagement/ChatManagement';
+import AssignChatiD from './Components/AdminView/ChatManagement/AssignChatid';
 
 //Student View
 import SubTemplates from './Components/StudentView/DocSubbmissions/SubTemplates';
@@ -32,47 +50,33 @@ import SFinalDocs from './Components/StudentView/DocSubbmissions/SFinalDocs';
 import UploadFinalDoc from './Components/StudentView/DocSubbmissions/UploadFinalDoc';
 import STopics from './Components/StudentView/TopicRegistration/STopics';
 import RegisterTopic from './Components/StudentView/TopicRegistration/RegisterTopic';
+import GroupList from './Components/StudentView/GroupRegistration/GroupList';
+import GroupRegister from './Components/StudentView/GroupRegistration/GroupRegister';
+import SChatRoom from './Components/StudentView/ChatManagement/SChatRoom';
 
 //Supervisor View
 import DocMarking from './Components/SupervisorView/EvaluateDocuments/DocMarking';
 import SupervisorFDocs from './Components/SupervisorView/EvaluateDocuments/SupervisorFDocs';
+import SupervisorViewTopics from './Components/SupervisorView/AcceptTopics/SupervisorViewTopics';
+import SupervisorReply from './Components/SupervisorView/AcceptTopics/SupervisorReply';
+import SChatManagement from './Components/SupervisorView/ChatManagement/SChatManagement';
+
+//Co Supervisor View
+import CSviewTopics from './Components/CoSupervisorView/AssignToGroup/CSviewTopics';
+import CSreply from './Components/CoSupervisorView/AssignToGroup/CSreply';
+import CoSChatManagement from './Components/CoSupervisorView/ChatManagement/CoSChatManagement';
 
 //Pannel Member View
 import VivaMarking from './Components/PannelMemberView/EvaluatePresentations/VivaMarking';
 import PTopicRegDocs from './Components/PannelMemberView/EvaluateDocuments/PTopicRegDocs';
+import PanelDetailsList from './Components/PannelMemberView/ViewPanel/PanelDetailsList';
+import FinalTopicDetails from './Components/PannelMemberView/AcceptTopics/FinalTopicDetails';
+import Feedback from './Components/PannelMemberView/AcceptTopics/Feedback';
 
 //Chat
 import Chat from './ChatSystem/Chat';
 import ChatApp from './ChatSystem/ChatApp';
 
-import Register from './Components/Auth/Register';
-import Navbar from './Components/Navbar/Navbar';
-import NotFound from './Components/NotFound/NotFound';
-import { Provider } from 'react-redux';
-import store from './redux/store';
-import jwt_decode from 'jwt-decode';
-import setAuthToken from './utils/setAuthToken';
-import { setCurrentUser, logoutUser } from './redux/actions/authActions';
-import PrivateRoute from './Components/private-route/PrivateRoute';
-import SupervisorViewTopics from './Components/SupervisorView/AcceptTopics/SupervisorViewTopics';
-import SupervisorReply from './Components/SupervisorView/AcceptTopics/SupervisorReply';
-import CSviewTopics from './Components/CoSupervisorView/AssignToGroup/CSviewTopics';
-import CSreply from './Components/CoSupervisorView/AssignToGroup/CSreply';
-import GroupList from './Components/StudentView/GroupRegistration/GroupList';
-import GroupRegister from './Components/StudentView/GroupRegistration/GroupRegister';
-import RegisteredGroups from './Components/AdminView/StudentGroupManagement/RegisteredGroups';
-import AssignPanel from './Components/AdminView/StudentGroupManagement/AssignPanel';
-import PanelList from './Components/AdminView/PannelManagement/PanelList';
-import EditPanelList from './Components/AdminView/PannelManagement/EditPanelList';
-import CreatePanel from './Components/AdminView/PannelManagement/CreatePanel';
-import PanelDetailsList from './Components/PannelMemberView/ViewPanel/PanelDetailsList';
-import FinalTopicDetails from './Components/PannelMemberView/AcceptTopics/FinalTopicDetails';
-import Feedback from './Components/PannelMemberView/AcceptTopics/Feedback';
-import ChatManagement from './Components/AdminView/ChatManagement/ChatManagement';
-import AssignChatiD from './Components/AdminView/ChatManagement/AssignChatid';
-import SChatManagement from './Components/SupervisorView/ChatManagement/SChatManagement';
-import CoSChatManagement from './Components/CoSupervisorView/ChatManagement/CoSChatManagement';
-import SChatRoom from './Components/StudentView/ChatManagement/SChatRoom';
 
 
 function App() {
@@ -100,7 +104,6 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route path="/register" component={Register} />
           <Route path="/loginAs" component={LoginAs} />
-
           <Route path="/Adminlogin" component={AdminLogin} />
           <Route path="/Studentlogin" component={StudentLogin} />
           <Route path="/Supervisorlogin" component={SupervisorLogin} />
@@ -138,7 +141,6 @@ function App() {
           <Route path="/FinalTopicDetails" component={FinalTopicDetails} />
           <Route path="/Feedback/:id" component={Feedback} />
           
-          
           {/* Student View */}
           <Route path="/SubTemplates" component={SubTemplates} />
           <Route path="/STopicRegDocs" component={STopicRegDocs} />
@@ -150,20 +152,15 @@ function App() {
           <Route path="/GroupList" component={GroupList} />
           <Route path="/GroupRegister" component={GroupRegister} />
           <Route path="/SChatRoom" component={SChatRoom} />
-
           
           {/* Co Supervisor View */}
           <Route path="/CSviewTopics" component={CSviewTopics} />
           <Route path="/CSreply/:id" component={CSreply} />
           <Route path="/CoSChatManagement" component={CoSChatManagement} />
 
-
           {/* Chat System */}
           <Route path="/Chat" component={Chat} />
           <Route path="/ChatApp" component={ChatApp} />
-
-
-        
 
           <Switch>
             <PrivateRoute exact path="/AdminDashboard" component={AdminDashboard} />

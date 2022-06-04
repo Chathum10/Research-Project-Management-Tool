@@ -48,6 +48,8 @@ export default class GroupList extends Component {
     return (
       <div className="back fixed" style={{ zIndex: 8 }}>
         <br />
+        <br />
+        <br />
         <div style={{ width: "20%", marginLeft: "80%" }}>
           <form className="d-flex">
             <input
@@ -61,7 +63,7 @@ export default class GroupList extends Component {
         </div>
         <div id="containerJoin">
           <center>
-            <h1 className="gifJoin">All Research groups </h1>
+            <h1>All Research groups </h1>
           </center>
         </div>
 
@@ -101,7 +103,7 @@ export default class GroupList extends Component {
           <br></br>
 
           <center>
-            <a className="btn btn-warning text-dark " href="/GroupRegister">
+            <a href="/GroupRegister">
               &nbsp;<b>Register Your group</b>
             </a>
           </center>

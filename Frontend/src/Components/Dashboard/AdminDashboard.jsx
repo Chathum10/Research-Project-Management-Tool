@@ -31,14 +31,6 @@ class Dashboard extends Component {
 
 
 
-                <div class="navigation">
-  	<a class="button2">
-    <div class="logout" >LOGOUT </div>
-	</a>
-  </div>
-
-
-
 
                 <h1>
                   Hi! <b>{user.name.split(' ')[0]} </b>

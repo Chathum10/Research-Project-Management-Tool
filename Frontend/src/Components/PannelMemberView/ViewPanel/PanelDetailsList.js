@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Table from "react-bootstrap/Table";
+import Button from 'react-bootstrap/Button';
+import { FaArrowAltCircleLeft } from 'react-icons/fa'
 export default class PanelDetailsList extends Component {
   constructor(props) {
     super(props);
@@ -51,14 +53,21 @@ export default class PanelDetailsList extends Component {
   render() {
     return (
       <div >
-        <br /> <br /> <br />
+        <br /><br /><br />
+        <table width="100%" id="tble" >
+          <Button variant="warning" href="/PannelMemberDashboard">
+            <FaArrowAltCircleLeft /> &nbsp;
+            Dashboard
+          </Button>
+        </table>
+        <br />
         <div id="containerJoin">
           <center>
             <h1>All Panels </h1>
           </center>
         </div>
         <div style={{ marginTop: 20 }} className="container">
-        <div style={{ width: "20%", marginLeft: "80%" }}>
+          <div style={{ width: "20%", marginLeft: "80%" }}>
             <input
               className="form-control me-2"
               type="search"
@@ -66,42 +75,42 @@ export default class PanelDetailsList extends Component {
               aria-label="Search"
               onChange={this.handleSearchArea}
             ></input>
-         
-        </div>
-      
 
-        <div>
-          <br />
+          </div>
 
-          <Table striped>
-            <thead>
-              <tr>
-                <th >Panel No.</th>
 
-                <th >Member O1</th>
-                <th >Member O2</th>
-                <th >Member O3</th>
-              </tr>
-            </thead>
+          <div>
+            <br />
 
-            <tbody>
-              {this.state.panels.map((panels) => (
+            <Table striped>
+              <thead>
                 <tr>
-                  <td>{panels.panelNo}</td>
+                  <th >Panel No.</th>
 
-                  <td>{panels.pMember01}</td>
-                  <td>{panels.pMember02}</td>
-                  <td>{panels.pMember03}</td>
+                  <th >Member O1</th>
+                  <th >Member O2</th>
+                  <th >Member O3</th>
                 </tr>
-              ))}
-            </tbody>
-          </Table>
+              </thead>
+
+              <tbody>
+                {this.state.panels.map((panels) => (
+                  <tr>
+                    <td>{panels.panelNo}</td>
+
+                    <td>{panels.pMember01}</td>
+                    <td>{panels.pMember02}</td>
+                    <td>{panels.pMember03}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+            <br></br>
+            <br></br>
+          </div>
           <br></br>
-          <br></br>
+
         </div>
-        <br></br>
-        
-      </div>
       </div>
     );
   }

@@ -49,6 +49,7 @@ export default class CSviewTopics extends Component {
   render() {
     return (
       <div className="container">
+        <br /> <br /> <br />
         <div className="row">
           <div className="col-lg-9 mt-2 mb-2">
             <h4>Topic List</h4>
@@ -63,7 +64,6 @@ export default class CSviewTopics extends Component {
             ></input>
           </div>
         </div>
-
         <table className="table">
           <thead>
             <tr>
@@ -76,20 +76,14 @@ export default class CSviewTopics extends Component {
               <th>Comments</th>
               <th>Supervisor's Name</th>
               <th>Co-Supervisor's Name</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
             {this.state.topics.map((topics, index) => (
               <tr key={index}>
                 <th scope="row">{index + 1}</th>
-                <td>
-                  <a
-                    href={`/topicRoutes/${topics._id}`}
-                    style={{ textDecoration: "none" }}
-                  >
-                    {topics.gid}
-                  </a>
-                </td>
+                <td>{topics.gid}</td>
                 <td>{topics.area}</td>
                 <td>{topics.name}</td>
                 <td>{topics.description}</td>
@@ -98,9 +92,7 @@ export default class CSviewTopics extends Component {
                 <td>{topics.sName}</td>
                 <td>{topics.csName}</td>
                 <td>
-                  <a className="btn btn-warning" href={`/CSreply/${topics._id}`}>
-                    <i className="fas fa-edit"></i>&nbsp;Assign
-                  </a>
+                  <a href={`/CSreply/${topics._id}`}>Assign</a>
                   &nbsp;
                 </td>
               </tr>

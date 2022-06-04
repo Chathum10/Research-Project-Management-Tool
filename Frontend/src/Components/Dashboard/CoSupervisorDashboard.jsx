@@ -31,6 +31,7 @@ class Dashboard extends Component {
                   Logout
                 </button>
                 <button><a href="/CSviewTopics">Assign To A Group</a></button>
+                <button><a href="/ChatApp">Chat</a></button>
               </div>
             </div>
           </div>

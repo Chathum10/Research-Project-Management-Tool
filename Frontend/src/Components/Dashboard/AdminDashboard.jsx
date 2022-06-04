@@ -19,27 +19,90 @@ class Dashboard extends Component {
           <div className="row">
             <div className="col-12">
               <div className="content">
+
+
+              <div class="text-right">
+              <button 	
+                  onClick={this.onLogoutClick}
+                  className="btn btn-lg btn-warning mt-5">
+                  Logout
+                </button>
+                </div>
+
+                
                 <h1>
                   Hi! <b>{user.name.split(' ')[0]} </b>
                 </h1>
                 <h3>
                   Wellcome Back Admin
                 </h3>
-                <button
+                {/* <button
                   onClick={this.onLogoutClick}
-                  className="btn btn-lg btn-warning mt-5"
-                >
+                  className="btn btn-lg btn-warning mt-5">
                   Logout
-                </button>
+                </button> */}
+{/*                 
                 <button><a href="/userProfiles">User Management</a></button>
                 <button><a href="/DocCategory">Document Management</a></button>
                 <button><a href="/RegisteredGroups">Student Group Management</a></button>
-                <button><a href="/PanelList">Pannel Management</a></button>
-              </div>
+                <button><a href="/PanelList">Pannel Management</a></button> */}
+
+
+<table width="100%" >
+        <th>
+        <div id="btnNew">
+        <button id="foot" class="btn1"><button class="button-os"><a href="/userProfiles">User Management</a></button></button>
+        </div>
+        </th>
+        <th>
+        <div id="btnNew">
+        <button id="foot" class="btn1"><button class="button-os"><a href="/DocCategory">Document Management</a></button></button>
+        </div>
+        </th>
+        <tr>
+          <td>
+          <div id="btnNew">
+        <button id="foot" class="btn1"><button class="button-os"><a href="/RegisteredGroups">Student Group Management</a></button></button>
+        </div>
+          </td>
+          <td>
+          <div id="btnNew">
+        <button id="foot" class="btn1"><button class="button-os"><a href="/PanelList">Pannel Management</a></button></button>
+        </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+          <div id="btnNew">
+        <button id="foot" class="btn1"><button class="button-os"><a href="/RegisteredGroups">btn</a></button></button>
+        </div>
+          </td>
+          <td>
+          <div id="btnNew">
+        <button id="foot" class="btn1"><button class="button-os"><a href="/PanelList">btn</a></button></button>
+        </div>
+          </td>
+        </tr>
+        </table>
+
+
+            </div>
             </div>
           </div>
         </div>
+        
+
+       
+
+
       </section>
+
+
+
+
+
+
+
     );
   }
 }

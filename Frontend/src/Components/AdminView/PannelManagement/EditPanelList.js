@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-
+import '../../Background/background.css';
 export default class EditPanelList extends Component {
   constructor(props) {
     super(props);
@@ -70,6 +70,7 @@ export default class EditPanelList extends Component {
 
   render() {
     return (
+      <div class="dashboard">
       <div>
         <h1>Edit Panel members</h1>
 
@@ -142,6 +143,7 @@ export default class EditPanelList extends Component {
             &nbsp; Edit
           </button>
         </form>
+      </div>
       </div>
     );
   }

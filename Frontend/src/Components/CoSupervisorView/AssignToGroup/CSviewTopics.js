@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
+import Table from "react-bootstrap/Table";
+import Button from "react-bootstrap/Button";
 
 export default class CSviewTopics extends Component {
   constructor(props) {
@@ -48,13 +50,16 @@ export default class CSviewTopics extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div>
         <br /> <br /> <br />
-        <div className="row">
-          <div className="col-lg-9 mt-2 mb-2">
-            <h4>Topic List</h4>
+        <div id="containerJoin">
+          <center>
+            <h1>Topic List</h1>
+            </center>
           </div>
-          <div className="col-lg-3 mt-2 mb-2">
+
+          <div style={{ marginTop: 20 }} className="container">
+        <div style={{ width: "20%", marginLeft: "80%" }}>
             <input
               className="form-control"
               type="searh"
@@ -64,10 +69,11 @@ export default class CSviewTopics extends Component {
             ></input>
           </div>
         </div>
-        <table className="table">
+        <br />
+        <Table striped>
           <thead>
             <tr>
-              <th scope="col">#</th>
+              <th >#</th>
               <th>Group ID</th>
               <th>Research Area</th>
               <th>Topic</th>
@@ -82,7 +88,7 @@ export default class CSviewTopics extends Component {
           <tbody>
             {this.state.topics.map((topics, index) => (
               <tr key={index}>
-                <th scope="row">{index + 1}</th>
+                <th >{index + 1}</th>
                 <td>{topics.gid}</td>
                 <td>{topics.area}</td>
                 <td>{topics.name}</td>
@@ -92,14 +98,16 @@ export default class CSviewTopics extends Component {
                 <td>{topics.sName}</td>
                 <td>{topics.csName}</td>
                 <td>
+                <Button variant="warning" size="sm">
                   <a href={`/CSreply/${topics._id}`}>Assign</a>
                   &nbsp;
+                  </Button>
                 </td>
               </tr>
             ))}
           </tbody>
-        </table>
-      </div>
+        </Table>
+    </div>
     );
   }
 }

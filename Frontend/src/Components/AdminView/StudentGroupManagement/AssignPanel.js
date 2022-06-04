@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-
+import Card from 'react-bootstrap/Card';
 export default class AssignPanel extends Component {
   constructor(props) {
     super(props);
@@ -91,17 +91,23 @@ export default class AssignPanel extends Component {
   render() {
     return (
       <div className="back fixed" style={{ zIndex: 8 }}>
-        <div className="col-md-8 mt-4 mx-auto">
-          <br /> <br />
-          <center>
-            <h1>
-              <span>Assign Panel Members</span>
-            </h1>
-          </center>
-          <center>
-            <br />
-            <div className="col-md-8 mt-4 mx-auto">
-              <br />
+          <div className="com-md-8 mt-4 mx-auto"></div>
+       <br /> <br />
+                    <center><h1>Assign Panel Members</h1></center>
+                    <center>
+                    <br />
+                    {[
+                      'Secondary',
+                    ].map((variant) => (
+                                          <Card       bg={variant.toLowerCase()}
+                                          key={variant}
+                                          text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
+                                          style={{ width: '40rem' }}
+                                          className="mb-2">
+                  
+                                              <div className="col-md-8 mt-4 mx-auto">
+                                                  <br />
+                         
               <form className="needs-validation" noValidate>
                 <h3>Team Details</h3>
                 <br />
@@ -111,6 +117,7 @@ export default class AssignPanel extends Component {
                   </label>
                   <br />
                   <button
+                  
                     type="submit"
                     style={{ marginTop: "15px" }}
                     onClick={this.generateKey}
@@ -214,6 +221,8 @@ export default class AssignPanel extends Component {
                   />
                 </div>
                 <button
+                 className="btn btn-success"
+         
                   type="submit"
                   style={{ marginTop: "15px" }}
                   onClick={this.onSubmit}
@@ -223,9 +232,13 @@ export default class AssignPanel extends Component {
                 <br /> <br /> <br />
               </form>
             </div>
+            </Card>
+
+                    ))}
+                     <br /> <br /> <br /> <br />
           </center>
         </div>
-      </div>
+      
     );
   }
 }

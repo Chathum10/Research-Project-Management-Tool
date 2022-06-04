@@ -18,18 +18,24 @@ class Dashboard extends Component {
           <div className="row">
             <div className="col-12">
               <div className="content">
+
+
+              <table width="100%" id="tble" >
+              <button 	
+                  onClick={this.onLogoutClick}
+                  className="btn btn-lg btn-danger mt-5">
+                  Logout
+                </button>
+                </table>
+
                 <h1>
-                  H! <b>{user.name.split(' ')[0]} </b>
+                  Hi ! <b>{user.name.split(' ')[0]} </b>
                 </h1>
                 <h3>
                   You are Successfully logged into Supervisor Dashboard
                 </h3>
-                <button
-                  onClick={this.onLogoutClick}
-                  className="btn btn-lg btn-warning mt-5"
-                >
-                  Logout
-                </button>
+                
+                <br></br>
 
                 {/* <button><a href="/DocMarking">Document Marking Schemes</a></button>
                 <button><a href="/SupervisorFDocs">Final Documents</a></button>

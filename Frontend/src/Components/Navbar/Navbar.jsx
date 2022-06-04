@@ -7,8 +7,8 @@ class Navbar extends Component {
   render() {
     return (
       <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-        <div className="container">
-          <Link class="navbar-brand border-none" to="/">
+        <div className="container" >
+          <Link  class="navbar-brand border-none" to="/" >
             `           `
           
           </Link>

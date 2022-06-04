@@ -32,6 +32,7 @@ class Dashboard extends Component {
                 </button>
                 <button><a href="/DocMarking">Document Marking Schemes</a></button>
                 <button><a href="/SupervisorFDocs">Final Documents</a></button>
+                <button><a href="/SupervisorViewTopics">Registered Topics</a></button>
               </div>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Auth.css';
+import './studentlogin.css';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -48,18 +49,19 @@ class Login extends Component {
   render() {
     const { email, password, errors } = this.state;
     return (
-      <section className="login">
+      <div  id="bannerS">
+      <section className="login" id="bannerS">
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
               <div className="login-left">
                 <h4 className="text-capitalize">
-                  Login with your credentials to enjoy the Application services
                 </h4>
               </div>
             </div>
             <div className="col-lg-6">
               <div className="login-right">
+                <br></br><br></br><br></br>
                 <h1>Student Login</h1>
                 <form noValidate onSubmit={this.loginSubmit}>
                   <div class="form-row">
@@ -113,12 +115,23 @@ class Login extends Component {
                       </button>
                     </div>
                   </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-12">
+                      <p>
+                        Don't have an account ?
+                        <Link to="/register" className="text-success">
+                          Create one
+                        </Link>
+                      </p>
+                    </div>
+                  </div>
                 </form>
               </div>
             </div>
           </div>
         </div>
       </section>
+      </div>
     );
   }
 }

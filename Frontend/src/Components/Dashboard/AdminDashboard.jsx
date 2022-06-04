@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../redux/actions/authActions';
-import './Dashboard.css';
+//import './Dashboard.css';
+
 
 class Dashboard extends Component {
   onLogoutClick = e => {
@@ -19,10 +20,10 @@ class Dashboard extends Component {
             <div className="col-12">
               <div className="content">
                 <h1>
-                  H! <b>{user.name.split(' ')[0]} </b>
+                  Hi! <b>{user.name.split(' ')[0]} </b>
                 </h1>
                 <h3>
-                  You are Successfully logged into Administrator Dashboard
+                  Wellcome Back Admin
                 </h3>
                 <button
                   onClick={this.onLogoutClick}
@@ -32,6 +33,8 @@ class Dashboard extends Component {
                 </button>
                 <button><a href="/userProfiles">User Management</a></button>
                 <button><a href="/DocCategory">Document Management</a></button>
+                <button><a href="/RegisteredGroups">Student Group Management</a></button>
+                <button><a href="/PanelList">Pannel Management</a></button>
               </div>
             </div>
           </div>

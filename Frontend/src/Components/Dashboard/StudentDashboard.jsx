@@ -32,7 +32,7 @@ class Dashboard extends Component {
                   Hi !  <b>{user.name.split(' ')[0]} </b>
                 </h1>
                 <h3>
-                  You are Successfully logged into Student Dashboard
+                Welcome Back Student
                 </h3>
 
 
@@ -64,7 +64,7 @@ class Dashboard extends Component {
                   <tr>
                     <td>
                       <div id="btnNew">
-                        <button id="foot" class="btn1"><button class="button-os"><a href="#">Chat Room</a></button></button>
+                        <button id="foot" class="btn1"><button class="button-os"><a href="/SChatRoom">Chat Room</a></button></button>
                       </div>
                     </td>
 

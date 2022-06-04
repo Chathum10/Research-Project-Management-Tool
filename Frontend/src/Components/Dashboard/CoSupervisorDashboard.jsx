@@ -35,7 +35,7 @@ class Dashboard extends Component {
                   Hi!<b>{user.name.split(' ')[0]} </b>
                 </h1>
                 <h3>
-                  You are Successfully logged into Co-Supervisor Dashboard
+                Welcome Back Co-Supervisor
                 </h3>
               
               

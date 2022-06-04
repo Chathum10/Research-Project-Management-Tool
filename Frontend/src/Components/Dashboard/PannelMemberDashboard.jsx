@@ -19,13 +19,13 @@ class Dashboard extends Component {
             <div className="col-12">
               <div className="content">
 
-              
-              <table width="100%" id="tble" >
-              <button 	
-                  onClick={this.onLogoutClick}
-                  className="btn btn-lg btn-danger mt-5">
-                  Logout
-                </button>
+
+                <table width="100%" id="tble" >
+                  <button
+                    onClick={this.onLogoutClick}
+                    className="btn btn-lg btn-danger mt-5">
+                    Logout
+                  </button>
                 </table>
 
 
@@ -34,42 +34,39 @@ class Dashboard extends Component {
                   Hi ! <b>{user.name.split(' ')[0]} </b>
                 </h1>
                 <h3>
-                  You are Successfully logged into Pannel Member Dashboard
+                  Welcome Back Pannel Member
                 </h3>
                 <br></br>
-                {/* <button><a href="/VivaMarking">Final Presentation Evaluation</a></button>
-                <button><a href="/PTopicRegDocs">Student Topic Registration Documents</a></button>
-                <button><a href="/PanelDetailsList">View My Panel</a></button>
-                <button><a href="/FinalTopicDetails">Accept/Reject Registered Topics</a></button> */}
 
 
 
 
-<table width="100%" >
-        <th>
-        <div id="btnNew">
-        <button id="foot" class="btn1"><button class="button-os"><a href="/VivaMarking">Final Presentation Evaluation</a></button></button>
-        </div>
-        </th>
-        <th>
-        <div id="btnNew">
-        <button id="foot" class="btn1"><button class="button-os"><a href="/PTopicRegDocs">Student Topic Registration Documents</a></button></button>
-        </div>
-        </th>
-        <tr>
-          <td>
-          <div id="btnNew">
-        <button id="foot" class="btn1"><button class="button-os"><a href="/PanelDetailsList">View My Panel</a></button></button>
-        </div>
-          </td>
-          <td>
-          <div id="btnNew">
-        <button id="foot" class="btn1"><button class="button-os"><a href="/FinalTopicDetails">Accept/Reject Registered Topics</a></button></button>
-        </div>
-          </td>
-        </tr>
-       
-        </table>
+
+                <table width="100%" >
+                  <th>
+                    <div id="btnNew">
+                      <button id="foot" class="btn1"><button class="button-os"><a href="/VivaMarking">Final Presentation Evaluation</a></button></button>
+                    </div>
+                  </th>
+                  <th>
+                    <div id="btnNew">
+                      <button id="foot" class="btn1"><button class="button-os"><a href="/PTopicRegDocs">Student Topic Registration Documents</a></button></button>
+                    </div>
+                  </th>
+                  <tr>
+                    <td>
+                      <div id="btnNew">
+                        <button id="foot" class="btn1"><button class="button-os"><a href="/PanelDetailsList">View My Panel</a></button></button>
+                      </div>
+                    </td>
+                    <td>
+                      <div id="btnNew">
+                        <button id="foot" class="btn1"><button class="button-os"><a href="/FinalTopicDetails">Accept/Reject Registered Topics</a></button></button>
+                      </div>
+                    </td>
+                  </tr>
+
+                </table>
 
 
               </div>

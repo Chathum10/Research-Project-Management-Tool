@@ -73,6 +73,7 @@ import ChatManagement from './Components/AdminView/ChatManagement/ChatManagement
 import AssignChatiD from './Components/AdminView/ChatManagement/AssignChatid';
 import SChatManagement from './Components/SupervisorView/ChatManagement/SChatManagement';
 import CoSChatManagement from './Components/CoSupervisorView/ChatManagement/CoSChatManagement';
+import SChatRoom from './Components/StudentView/ChatManagement/SChatRoom';
 
 
 function App() {
@@ -149,7 +150,7 @@ function App() {
           <Route path="/RegisterTopic" component={RegisterTopic} />
           <Route path="/GroupList" component={GroupList} />
           <Route path="/GroupRegister" component={GroupRegister} />
-
+          <Route path="/SChatRoom" component={SChatRoom} />
 
           
           {/* Co Supervisor View */}

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
+import { FaArrowAltCircleLeft } from 'react-icons/fa';
 export default class RegisteredGroups extends Component {
   constructor(props) {
     super(props);
@@ -48,7 +49,14 @@ export default class RegisteredGroups extends Component {
   render() {
     return (
       <div >
-        <br /> <br /> <br />
+        <br /><br /><br />
+        <table width="100%" id="tble" >
+          <Button variant="warning" href="/AdminDashboard">
+            <FaArrowAltCircleLeft /> &nbsp;
+            Dashboard
+          </Button>
+        </table>
+        <br />
         <div id="containerJoin">
           <center>
             <h1>All Research groups </h1>
@@ -96,7 +104,7 @@ export default class RegisteredGroups extends Component {
                   <td>{groups.g_id}</td>
                   <td>{groups.panel}</td>
                   <td>
-                    <Button variant="warning" size="sm">
+                    <Button variant="dark" size="sm">
                       <a href={`/AssignPanel/${groups._id}`}><b>Assign a pannel</b></a>
                     </Button>
                   </td>

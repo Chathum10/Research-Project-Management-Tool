@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import axios from "axios";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
-import { FaEdit, FaPlusCircle,  FaTrash } from "react-icons/fa";
+import { FaArrowAltCircleLeft } from 'react-icons/fa';
+import { FaEdit, FaPlusCircle, FaTrash } from "react-icons/fa";
 
 export default class PanelList extends Component {
   constructor(props) {
@@ -61,31 +62,39 @@ export default class PanelList extends Component {
   render() {
     return (
       <div>
-      <div className="back fixed" style={{ zIndex: 8 }}>
+        <br /><br /><br />
+        <table width="100%" id="tble" >
+          <Button variant="warning" href="/AdminDashboard">
+            <FaArrowAltCircleLeft /> &nbsp;
+            Dashboard
+          </Button>
+        </table>
         <br />
-        <br />
+        <div className="back fixed" style={{ zIndex: 8 }}>
+          <br />
+          <br />
 
-        <div id="containerJoin">
-          <center>
-            <h1>All Panels </h1>
-          </center>
-        </div>
-      
-
-        <div style={{ marginTop: 20 }} className="container">
-        <div style={{ width: "30%", marginLeft: "80%" }}>
-            <form >
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search By Panel No. OR Member's Name"
-                aria-label="Search"
-                onChange={this.handleSearchArea}
-              ></input>
-            </form>
+          <div id="containerJoin">
+            <center>
+              <h1>All Panels </h1>
+            </center>
           </div>
 
-         
+
+          <div style={{ marginTop: 20 }} className="container">
+            <div style={{ width: "30%", marginLeft: "80%" }}>
+              <form >
+                <input
+                  className="form-control me-2"
+                  type="search"
+                  placeholder="Search By Panel No. OR Member's Name"
+                  aria-label="Search"
+                  onChange={this.handleSearchArea}
+                ></input>
+              </form>
+            </div>
+
+
             <br />
 
             <Table striped>
@@ -139,7 +148,7 @@ export default class PanelList extends Component {
             <br></br>
           </div>
         </div>
-     
+
         <br></br>
         <br></br>
         <br></br>

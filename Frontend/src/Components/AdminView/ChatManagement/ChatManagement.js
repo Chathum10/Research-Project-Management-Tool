@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { FaArrowAltCircleLeft } from 'react-icons/fa';
+import Button from 'react-bootstrap/Button';
+
 
 export default class ChatManagement extends Component {
   constructor(props) {
@@ -48,6 +51,14 @@ export default class ChatManagement extends Component {
   render() {
     return (
       <div className="container">
+         <br /><br /><br />
+          <table width="100%" id="tble" >
+            <Button variant="warning" href="/AdminDashboard">
+              <FaArrowAltCircleLeft /> &nbsp;
+              Dashboard
+            </Button>
+          </table>
+          <br />
         <div className="row">
           <div className="col-lg-9 mt-2 mb-2">
             <h4>Topic List</h4>
@@ -95,10 +106,10 @@ export default class ChatManagement extends Component {
                 <td>{topics.cId}</td>
                 <td>
                   <a
-                    className="btn btn-warning"
+                    className="btn btn-dark"
                     href={`/AssignChatiD/${topics._id}`}
                   >
-                    <i className="fas fa-edit"></i>&nbsp;Assign Chat ID
+                    <i className="fas fa-edit"></i>&nbsp;<b>Assign Chat ID</b>
                   </a>
                   &nbsp;
                 </td>

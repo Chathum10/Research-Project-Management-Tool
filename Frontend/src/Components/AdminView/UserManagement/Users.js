@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Table from 'react-bootstrap/Table';
-import { FaEdit, FaTrash } from 'react-icons/fa';
+import { FaArrowAltCircleLeft, FaEdit, FaTrash } from 'react-icons/fa';
+import Button from 'react-bootstrap/Button';
 
 export default class Users extends Component {
   constructor(props) {
@@ -70,7 +71,13 @@ export default class Users extends Component {
   render() {
     return (
       <div>
-        <div>
+        <div><br /><br /><br />
+          <table width="100%" id="tble" >
+            <Button variant="warning" href="/AdminDashboard">
+              <FaArrowAltCircleLeft /> &nbsp;
+              Dashboard
+            </Button>
+          </table>
           <br /> <br /> <br />
           <div style={{ width: '20%', marginLeft: '80%' }}>
             <form className="d-flex">
@@ -81,6 +88,8 @@ export default class Users extends Component {
               </input>
             </form>
           </div>
+
+
           <div id="containerJoin">
             <center>
               <h1 className="gifJoin">All User Profiles</h1>
@@ -117,12 +126,12 @@ export default class Users extends Component {
 
                   <td class="table-light">
                     <a className="btn btn-primary" href={`/EditUser/${User._id}`}>
-                      <FaEdit/>&nbsp;
+                      <FaEdit />&nbsp;
                     </a>
                     &nbsp;
 
                     <a className="btn btn-danger" href="#" onClick={() => window.confirm("Are You Sure You Want To Delete This User Profile ?") && this.onDelete(User._id)}>
-                    <FaTrash/>&nbsp;
+                      <FaTrash />&nbsp;
                     </a>
                   </td>
                 </tr>

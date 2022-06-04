@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
+import { FaArrowAltCircleLeft } from 'react-icons/fa';
+import Button from 'react-bootstrap/Button';
 
 class DocCategory extends Component {
  
   render() {
     return (
 
-      <div>
+      <div><br /><br /><br />
+      <table width="100%" id="tble" >
+        <Button variant="warning" href="/AdminDashboard">
+          <FaArrowAltCircleLeft /> &nbsp;
+          Dashboard
+        </Button>
+      </table>
             <div className="col-lg-6" >
               <div className="login-right" >
               <h1>Upload Documents TO</h1>

@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { FaFileUpload } from 'react-icons/fa';
+import { FaArrowAltCircleLeft} from 'react-icons/fa';
 import React from 'react'
 
 const PannelMemberDoc = () => {
@@ -40,9 +41,15 @@ const PannelMemberDoc = () => {
   };
 
   return (
-    <div><br /><br /><br /><br /><br />
+    <div><br /><br /><br />
+          <table width="100%" id="tble" >
+            <Button variant="warning" href="/AdminDashboard">
+              <FaArrowAltCircleLeft /> &nbsp;
+              Dashboard
+            </Button>
+          </table>
 
-
+          <br /><br /><br />
       <center><h1>Upload Presentation Marking Schemes For Panel</h1></center>
       <center>
         <br />

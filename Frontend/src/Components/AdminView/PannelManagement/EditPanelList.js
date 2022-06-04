@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Card from 'react-bootstrap/Card';
+
 export default class EditPanelList extends Component {
   constructor(props) {
     super(props);
@@ -70,25 +70,12 @@ export default class EditPanelList extends Component {
 
   render() {
     return (
-      <div className="back fixed" style={{ zIndex: 8 }}><br />
-      <div className="com-md-8 mt-4 mx-auto"></div>
-      <br /> <br />
-                   <center><h1>Edit Panel Members</h1></center>
-                   <center>
-                   <br />
-                   {[
-   'Secondary',
- ].map((variant) => (
-                       <Card       bg={variant.toLowerCase()}
-                       key={variant}
-                       text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
-                       style={{ width: '40rem' }}
-                       className="mb-2">
-                          <div className="col-md-8 mt-4 mx-auto">
-                                <br />
+      <div>
+        <h1>Edit Panel members</h1>
+
         <form className="needs-validation" noValidate>
           <div className="form-group" style={{ marginBottom: "15px" }}>
-            <label style={{ marginBottom: "5px" }}><b>Panel Number</b></label>
+            <label style={{ marginBottom: "5px" }}>Panel Number</label>
             <select
               name="panelNo"
               value={this.state.panelNo}
@@ -147,22 +134,14 @@ export default class EditPanelList extends Component {
             />
           </div>
           <button
-          className="btn btn-success"
             type="submit"
             style={{ marginTop: "15px" }}
             onClick={this.onSubmit}
           >
-            &nbsp; Update
-          </button> <br /> <br /> <br />
+            &nbsp; Edit
+          </button>
         </form>
       </div>
-      </Card>
-  ))}
-   <br /> <br /> <br /> <br />
-                    </center>
-                     </div>
-
-                     
     );
   }
 }

@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Table from "react-bootstrap/Table";
-import Button from "react-bootstrap/Button";
-import { FaEdit, FaPlusCircle,  FaTrash } from "react-icons/fa";
+
 export default class PanelList extends Component {
   constructor(props) {
     super(props);
@@ -59,85 +57,72 @@ export default class PanelList extends Component {
 
   render() {
     return (
-      <div>
+      <div className="back fixed" style={{ zIndex: 8 }}>
         <br />
-        <br />
-
+        <div style={{ width: "20%", marginLeft: "80%" }}>
+          <form className="d-flex">
+            <input
+              className="form-control me-2"
+              type="search"
+              placeholder="Search By Panel No. OR Member's Name"
+              aria-label="Search"
+              onChange={this.handleSearchArea}
+            ></input>
+          </form>
+        </div>
         <div id="containerJoin">
           <center>
             <h1>All Panels </h1>
           </center>
         </div>
-      
 
-        <div style={{ marginTop: 20 }} className="container">
-        <div style={{ width: "30%", marginLeft: "80%" }}>
-            <form >
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search By Panel No. OR Member's Name"
-                aria-label="Search"
-                onChange={this.handleSearchArea}
-              ></input>
-            </form>
-          </div>
+        <div>
+          <br />
 
-         
-            <br />
+          <table class="table table-bordered ">
+            <thead>
+              <tr>
+                <th scope="col">Panel No.</th>
 
-            <Table striped>
-              <thead>
+                <th scope="col">Member O1</th>
+                <th scope="col">Member O2</th>
+                <th scope="col">Member O3</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {this.state.panels.map((panels) => (
                 <tr>
-                  <th>Panel No.</th>
+                  <td class="table-light">{panels.panelNo}</td>
 
-                  <th>Member O1</th>
-                  <th>Member O2</th>
-                  <th>Member O3</th>
-                  <th>Action</th>
+                  <td class="table-light">{panels.pMember01}</td>
+                  <td class="table-light">{panels.pMember02}</td>
+                  <td class="table-light">{panels.pMember03}</td>
+                  <td>
+                    <a href={`/EditPanelList/${panels._id}`}>&nbsp;Edit</a>
+                    &nbsp; |
+                    <a href="#" onClick={() => this.onDelete(panels._id)}>
+                      &nbsp;Delete
+                    </a>
+                  </td>
                 </tr>
-              </thead>
+              ))}
+            </tbody>
+          </table>
+          <br></br>
+          <br></br>
 
-              <tbody>
-                {this.state.panels.map((panels) => (
-                  <tr>
-                    <td>{panels.panelNo}</td>
-
-                    <td>{panels.pMember01}</td>
-                    <td>{panels.pMember02}</td>
-                    <td>{panels.pMember03}</td>
-                    <td>
-                      <a href={`/EditPanelList/${panels._id}`}>
-                        &nbsp;
-                        <FaEdit />
-                      </a>
-                      &nbsp;&nbsp; |&nbsp;
-                      <a href="#" onClick={() => this.onDelete(panels._id)}>
-                        &nbsp;
-                        <FaTrash />
-                      </a>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </Table>
-            <br></br>
-            <br></br>
-
-            <div className="mb-2">
-              <Button variant="warning" size="lg">
-                <a href="/CreatePanel">
-                  Create a New panel&nbsp;
-                  <FaPlusCircle />
-                </a>
-              </Button>
-            </div>
-            <br></br>
-            <br></br>
-            <br></br>
-          </div>
+          <center>
+            <a href="/CreatePanel">
+              &nbsp;<b>Create a New panel</b>
+            </a>
+          </center>
         </div>
-     
+        <br></br>
+        <br></br>
+        <br></br>
+      </div>
     );
   }
 }

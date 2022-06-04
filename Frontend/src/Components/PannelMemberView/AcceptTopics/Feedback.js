@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-
+import Card from 'react-bootstrap/Card';
 export default class Feedback extends Component {
   constructor(props) {
     super(props);
@@ -99,12 +99,26 @@ export default class Feedback extends Component {
 
   render() {
     return (
-      <div className="col-md-8 mt-4 mx-auto">
-        <h1>Assign Co-Supervisors</h1>
+      <div className="back fixed" style={{ zIndex: 8 }}><br />
+       <div className="com-md-8 mt-4 mx-auto"></div>
+       <br /> <br />
+                    <center><h1>Assign Co-Supervisors</h1></center>
+                    <center>
+                    <br />
+                    {[
+    'Secondary',
+  ].map((variant) => (
+                        <Card       bg={variant.toLowerCase()}
+                        key={variant}
+                        text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
+                        style={{ width: '40rem' }}
+                        className="mb-2">
 
+                            <div className="col-md-8 mt-4 mx-auto">
+                                <br />
         <form className="needs-validation" noValidate>
           <div className="form-group" style={{ marginBottom: "15px" }}>
-            <label style={{ marginBottom: "5px" }}>Group ID</label>
+            <label style={{ marginBottom: "5px" }}><b>Group ID</b></label>
             <input
               disabled
               type="text"
@@ -116,7 +130,7 @@ export default class Feedback extends Component {
             />
 
             <div className="form-group" style={{ marginBottom: "15px" }}>
-              <label style={{ marginBottom: "5px" }}>Research Area</label>
+              <label style={{ marginBottom: "5px" }}><b>Research Area</b></label>
               <select
                 disabled
                 name="area"
@@ -149,7 +163,7 @@ export default class Feedback extends Component {
             </div>
           </div>
           <div className="form-group" style={{ marginBottom: "15px" }}>
-            <label style={{ marginBottom: "5px" }}>Sub Topic</label>
+            <label style={{ marginBottom: "5px" }}><b>Sub Topic</b></label>
             <input
               disabled
               type="text"
@@ -162,8 +176,8 @@ export default class Feedback extends Component {
           </div>
 
           <div className="form-group" style={{ marginBottom: "15px" }}>
-            <label style={{ marginBottom: "5px" }}>Brief Description</label>
-            <input
+            <label style={{ marginBottom: "5px" }}><b>Brief Description</b></label>
+            <textarea
               disabled
               type="text"
               className="form-control"
@@ -175,7 +189,7 @@ export default class Feedback extends Component {
           </div>
 
           <div className="form-group" style={{ marginBottom: "15px" }}>
-            <label style={{ marginBottom: "5px" }}>Status</label>
+            <label style={{ marginBottom: "5px" }}><b>Status</b></label>
             <input
               disabled
               type="text"
@@ -188,7 +202,7 @@ export default class Feedback extends Component {
           </div>
 
           <div className="form-group" style={{ marginBottom: "15px" }}>
-            <label style={{ marginBottom: "5px" }}>Supervisor's Name</label>
+            <label style={{ marginBottom: "5px" }}><b>Supervisor's Name</b></label>
             <input
               disabled
               type="text"
@@ -201,7 +215,7 @@ export default class Feedback extends Component {
           </div>
 
           <div className="form-group" style={{ marginBottom: "15px" }}>
-            <label style={{ marginBottom: "5px" }}>Co-Supervisor's Name</label>
+            <label style={{ marginBottom: "5px" }}><b>Co-Supervisor's Name</b></label>
             <input
               disabled
               type="text"
@@ -214,7 +228,7 @@ export default class Feedback extends Component {
           </div>
 
           <div className="form-group" style={{ marginBottom: "15px" }}>
-            <label style={{ marginBottom: "5px" }}>Final Feedback</label>
+            <label style={{ marginBottom: "5px" }}><b>Final Feedback</b></label>
             <input
               type="text"
               className="form-control"
@@ -226,16 +240,23 @@ export default class Feedback extends Component {
           </div>
 
           <button
-            className="btn btn-success"
+           className="btn btn-success"
             type="submit"
             style={{ marginTop: "15px" }}
             onClick={this.onSubmit}
           >
-            <i className="far far-check-square"></i>
             &nbsp; Publish
           </button>
+          <br /> <br /> <br />
         </form>
       </div>
+      </Card>
+  ))}
+   <br /> <br /> <br /> <br />
+                    </center>
+                     </div>
+
+                     
     );
   }
 }

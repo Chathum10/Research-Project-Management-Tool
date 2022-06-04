@@ -42,19 +42,17 @@ class Dashboard extends Component {
               <br></br>
 
 
-                {/* <button><a href="/CSviewTopics">Assign To A Group</a></button> */}
-
-
                 <table width="100%" >
         <th>
         <div id="btnNew">
         <button id="foot" class="btn1"><button class="button-os"><a href="/CSviewTopics">Assign To A Group</a></button></button>
         </div>
+        <div id="btnNew">
+        <button id="foot" class="btn1"><button class="button-os"><a href="/ChatApp">Chat</a></button></button>
+        </div>
         </th>
         </table>
 
-                <button><a href="/CSviewTopics">Assign To A Group</a></button>
-                <button><a href="/ChatApp">Chat</a></button>
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-
+import Card from 'react-bootstrap/Card';
 export default class RegisterTopic extends Component {
   constructor(props) {
     super(props);
@@ -52,15 +52,26 @@ export default class RegisterTopic extends Component {
 
   render() {
     return (
-      <div className="col-md-8 mt-4 mx-auto">
-        <br />
-        <br />
-        <h1 className="h3 mb-3 font-weight-normal">
-          Your new discussion topic
-        </h1>
+      <div className="back fixed" style={{ zIndex: 8 }}><br />
+      <div className="com-md-8 mt-4 mx-auto"></div>
+      <br /> <br />
+                   <center><h1>Your New Research Topic</h1></center>
+                   <center>
+                   <br />
+                   {[
+   'Secondary',
+ ].map((variant) => (
+                       <Card       bg={variant.toLowerCase()}
+                       key={variant}
+                       text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
+                       style={{ width: '40rem' }}
+                       className="mb-2">
+
+                           <div className="col-md-8 mt-4 mx-auto">
+                               <br />
         <form className="needs-validation" noValidate>
           <div className="form-group" style={{ marginBottom: "15px" }}>
-            <label style={{ marginBottom: "5px" }}>Group ID</label>
+            <label style={{ marginBottom: "5px" }}><b>Group ID</b></label>
             <input
               type="text"
               className="form-control"
@@ -71,7 +82,7 @@ export default class RegisterTopic extends Component {
             />
           </div>
           <div className="form-group" style={{ marginBottom: "15px" }}>
-            <label style={{ marginBottom: "5px" }}>Research Area</label>
+            <label style={{ marginBottom: "5px" }}><b>Research Area</b></label>
             <select
               name="area"
               value={this.state.area}
@@ -103,7 +114,7 @@ export default class RegisterTopic extends Component {
           </div>
 
           <div className="form-group" style={{ marginBottom: "15px" }}>
-            <label style={{ marginBottom: "5px" }}>Sub Topic</label>
+            <label style={{ marginBottom: "5px" }}><b>Sub Topic</b></label>
             <input
               type="text"
               className="form-control"
@@ -115,7 +126,7 @@ export default class RegisterTopic extends Component {
           </div>
 
           <div className="form-group" style={{ marginBottom: "15px" }}>
-            <label style={{ marginBottom: "5px" }}>Brief Description</label>
+            <label style={{ marginBottom: "5px" }}><b>Brief Description</b></label>
             <textarea
               type="text"
               className="form-control"
@@ -127,14 +138,23 @@ export default class RegisterTopic extends Component {
           </div>
 
           <button
+          className="btn btn-success"
             type="submit"
             style={{ marginTop: "15px" }}
             onClick={this.onSubmit}
           >
             &nbsp; Post to forum
-          </button>
+            </button>
+          <br /> <br /> <br />
         </form>
       </div>
+      </Card>
+  ))}
+   <br /> <br /> <br /> <br />
+                    </center>
+                     </div>
+
+                     
     );
   }
 }

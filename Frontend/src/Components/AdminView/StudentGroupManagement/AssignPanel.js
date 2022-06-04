@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import '../../Background/background.css';
 
 export default class AssignPanel extends Component {
   constructor(props) {
@@ -90,6 +91,7 @@ export default class AssignPanel extends Component {
 
   render() {
     return (
+      <div class="dashboard">
       <div className="back fixed" style={{ zIndex: 8 }}>
         <div className="col-md-8 mt-4 mx-auto">
           <br /> <br />
@@ -227,6 +229,7 @@ export default class AssignPanel extends Component {
             </div>
           </center>
         </div>
+      </div>
       </div>
     );
   }

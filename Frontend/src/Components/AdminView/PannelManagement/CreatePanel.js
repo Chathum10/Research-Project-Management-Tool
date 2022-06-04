@@ -114,12 +114,10 @@ export default class CreatePanel extends Component {
             />
           </div>
           <button
-            className="btn btn-success"
             type="submit"
             style={{ marginTop: "15px" }}
             onClick={this.onSubmit}
           >
-            <i className="far far-check-square"></i>
             &nbsp; Create Panel
           </button>
         </form>

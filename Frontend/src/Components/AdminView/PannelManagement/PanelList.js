@@ -72,7 +72,7 @@ export default class PanelList extends Component {
         </div>
         <div id="containerJoin">
           <center>
-            <h1 className="gifJoin">All Panels </h1>
+            <h1>All Panels </h1>
           </center>
         </div>
 
@@ -100,13 +100,8 @@ export default class PanelList extends Component {
                   <td class="table-light">{panels.pMember02}</td>
                   <td class="table-light">{panels.pMember03}</td>
                   <td>
-                    <a
-                      className="btn btn-warning"
-                      href={`/EditPanelList/${panels._id}`}
-                    >
-                      &nbsp;Edit
-                    </a>
-                    &nbsp;
+                    <a href={`/EditPanelList/${panels._id}`}>&nbsp;Edit</a>
+                    &nbsp; |
                     <a href="#" onClick={() => this.onDelete(panels._id)}>
                       &nbsp;Delete
                     </a>
@@ -119,7 +114,7 @@ export default class PanelList extends Component {
           <br></br>
 
           <center>
-            <a className="btn btn-warning text-dark " href="/CreatePanel">
+            <a href="/CreatePanel">
               &nbsp;<b>Create a New panel</b>
             </a>
           </center>

@@ -111,7 +111,6 @@ export default class AssignPanel extends Component {
                   </label>
                   <br />
                   <button
-                    className="btn btn-dark"
                     type="submit"
                     style={{ marginTop: "15px" }}
                     onClick={this.generateKey}
@@ -152,7 +151,7 @@ export default class AssignPanel extends Component {
                 </div>
                 <br />
                 <br />
-                <h4 style={{ color: "#0000FF" }}>Member Details</h4>
+                <h4>Member Details</h4>
                 <br />
                 <div className="form-group" style={{ marginBottom: "15px" }}>
                   <label style={{ marginBottom: "5px" }}>
@@ -215,7 +214,6 @@ export default class AssignPanel extends Component {
                   />
                 </div>
                 <button
-                  className="btn btn-success"
                   type="submit"
                   style={{ marginTop: "15px" }}
                   onClick={this.onSubmit}

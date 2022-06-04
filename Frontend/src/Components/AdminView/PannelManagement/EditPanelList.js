@@ -134,7 +134,6 @@ export default class EditPanelList extends Component {
             />
           </div>
           <button
-            className="btn btn-success"
             type="submit"
             style={{ marginTop: "15px" }}
             onClick={this.onSubmit}

@@ -6,6 +6,7 @@ import React from 'react'
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import { FaFileDownload, FaFilePdf, FaFileUpload } from 'react-icons/fa'
+import { FaArrowAltCircleLeft } from 'react-icons/fa';
 
 const SFinalDocs = () => {
   const [finalDoc, setFinalDoc] = useState([]);
@@ -26,9 +27,15 @@ const SFinalDocs = () => {
   }, []);
 
   return (
-    <div><br /><br /><br /><br /><br />
-
-
+    <div>
+      <br /><br /><br />
+      <table width="100%" id="tble" >
+        <Button variant="warning" href="/StudentDashboard">
+          <FaArrowAltCircleLeft /> &nbsp;
+          Dashboard
+        </Button>
+      </table>
+      <br />
 
       <div style={{ marginTop: 20, }} className='container'>
         <div id="containerJoin">

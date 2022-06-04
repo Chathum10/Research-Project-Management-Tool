@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
+import { FaArrowAltCircleLeft } from 'react-icons/fa'
 export default class GroupList extends Component {
   constructor(props) {
     super(props);
@@ -48,8 +49,13 @@ export default class GroupList extends Component {
   render() {
     return (
       <div >
-        <br />
-        <br />
+        <br /><br /><br />
+        <table width="100%" id="tble" >
+          <Button variant="warning" href="/StudentDashboard">
+            <FaArrowAltCircleLeft /> &nbsp;
+            Dashboard
+          </Button>
+        </table>
         <br />
         <div id="containerJoin">
           <center>
@@ -60,8 +66,8 @@ export default class GroupList extends Component {
         <br />
         <br />
         <div style={{ marginTop: 20 }} className="container">
-        <div style={{ width: "25%", marginLeft: "80%" }}>
-        
+          <div style={{ width: "25%", marginLeft: "80%" }}>
+
             <input
               className="form-control me-2"
               type="search"
@@ -69,52 +75,52 @@ export default class GroupList extends Component {
               aria-label="Search"
               onChange={this.handleSearchArea}
             ></input>
+          </div>
         </div>
-        </div>
-       
 
-    
-          <br />
 
-          <Table striped>
-            <thead>
+
+        <br />
+
+        <Table striped>
+          <thead>
+            <tr>
+              <th>Leader's ID</th>
+
+              <th>Member O1</th>
+              <th>Member O2</th>
+              <th>Member O3</th>
+              <th>Member O4</th>
+              <th>Group ID</th>
+              <th>Panel No.</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {this.state.groups.map((groups) => (
               <tr>
-                <th>Leader's ID</th>
+                <td >{groups.l_id}</td>
 
-                <th>Member O1</th>
-                <th>Member O2</th>
-                <th>Member O3</th>
-                <th>Member O4</th>
-                <th>Group ID</th>
-                <th>Panel No.</th>
+                <td >{groups.member01}</td>
+                <td >{groups.member02}</td>
+                <td >{groups.member03}</td>
+                <td >{groups.member04}</td>
+                <td >{groups.g_id}</td>
+                <td >{groups.panel}</td>
               </tr>
-            </thead>
+            ))}
+          </tbody>
+        </Table>
+        <br></br>
+        <br></br>
 
-            <tbody>
-              {this.state.groups.map((groups) => (
-                <tr>
-                  <td >{groups.l_id}</td>
-
-                  <td >{groups.member01}</td>
-                  <td >{groups.member02}</td>
-                  <td >{groups.member03}</td>
-                  <td >{groups.member04}</td>
-                  <td >{groups.g_id}</td>
-                  <td >{groups.panel}</td>
-                </tr>
-              ))}
-            </tbody>
-          </Table>
-          <br></br>
-          <br></br>
-
-          <div className="mb-2">
-              <Button variant="warning" size="lg">
+        <div className="mb-2">
+          <Button variant="warning" size="lg">
             <a href="/GroupRegister">
               &nbsp;<b>Register Your group</b>
             </a>
-            </Button>
-      
+          </Button>
+
         </div>
         <br></br>
         <br></br>

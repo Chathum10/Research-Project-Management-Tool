@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
+import { FaArrowAltCircleLeft } from 'react-icons/fa'
 
 export default class STopics extends Component {
   constructor(props) {
@@ -51,9 +52,15 @@ export default class STopics extends Component {
   render() {
     return (
       <div >
+        <br /><br /><br />
+        <table width="100%" id="tble" >
+          <Button variant="warning" href="/StudentDashboard">
+            <FaArrowAltCircleLeft /> &nbsp;
+            Dashboard
+          </Button>
+        </table>
         <br />
-        <br />
-        <br />
+
         <div id="containerJoin">
           <center>
             <h1>Topic List </h1>
@@ -62,8 +69,8 @@ export default class STopics extends Component {
         <br />
         <br />
         <div style={{ marginTop: 20 }} className="container">
-        <div style={{ width: "25%", marginLeft: "80%" }}>
-        
+          <div style={{ width: "25%", marginLeft: "80%" }}>
+
             <input
               className="form-control"
               type="searh"
@@ -107,14 +114,14 @@ export default class STopics extends Component {
           </tbody>
         </Table>
         <br></br>
-          <br></br>
+        <br></br>
         <div className="mb-2">
-              <Button variant="warning" size="lg">
-          <a href="/RegisterTopic">Register Topic</a>
+          <Button variant="warning" size="lg">
+            <a href="/RegisterTopic">Register Topic</a>
           </Button>
-      </div>
-      
-      <br></br>
+        </div>
+
+        <br></br>
         <br></br>
       </div>
     );

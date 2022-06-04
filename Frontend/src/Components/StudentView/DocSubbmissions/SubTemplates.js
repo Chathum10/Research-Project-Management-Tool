@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
-
+import { FaArrowAltCircleLeft } from 'react-icons/fa'
 import React from 'react'
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
@@ -27,7 +27,15 @@ const SubTemplates = () => {
   }, []);
 
   return (
-    <div><br /><br /><br /><br /><br />
+    <div>
+      <br /><br /><br />
+      <table width="100%" id="tble" >
+        <Button variant="warning" href="/StudentDashboard">
+          <FaArrowAltCircleLeft /> &nbsp;
+          Dashboard
+        </Button>
+      </table>
+      <br />
 
 
       <div style={{ marginTop: 20, }} className='container'>

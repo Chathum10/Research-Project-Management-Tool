@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import axios from "axios";
+<<<<<<< HEAD
+
+import Card from 'react-bootstrap/Card';
+=======
 import '../../Background/background.css';
+>>>>>>> b9b0b281d44d175bcb3ff7d8cff99b84672f42b4
 export default class CreatePanel extends Component {
   constructor(props) {
     super(props);
@@ -52,12 +57,32 @@ export default class CreatePanel extends Component {
 
   render() {
     return (
+<<<<<<< HEAD
+      <div className="back fixed" style={{ zIndex: 8 }}><br />
+       <div className="com-md-8 mt-4 mx-auto"></div>
+       <br /> <br />
+                    <center><h1>Create New Panel</h1></center>
+                    <center>
+                    <br />
+                    {[
+    'Secondary',
+  ].map((variant) => (
+                        <Card       bg={variant.toLowerCase()}
+                        key={variant}
+                        text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
+                        style={{ width: '40rem' }}
+                        className="mb-2">
+
+                            <div className="col-md-8 mt-4 mx-auto">
+                                <br />
+=======
       <div class="dashboard">
       <div>
         <h1>Create New Panel</h1>
+>>>>>>> b9b0b281d44d175bcb3ff7d8cff99b84672f42b4
         <form className="needs-validation" noValidate>
           <div className="form-group" style={{ marginBottom: "15px" }}>
-            <label style={{ marginBottom: "5px" }}>Panel Number</label>
+            <label style={{ marginBottom: "5px" }}><b>Panel Number</b></label>
             <select
               name="panelNo"
               value={this.state.panelNo}
@@ -115,17 +140,27 @@ export default class CreatePanel extends Component {
             />
           </div>
           <button
-            className="btn btn-success"
+          className="btn btn-success"
             type="submit"
             style={{ marginTop: "15px" }}
             onClick={this.onSubmit}
           >
-            <i className="far far-check-square"></i>
-            &nbsp; Create Panel
+            &nbsp; Create Panel 
           </button>
+          <br /> <br /> <br />
         </form>
       </div>
+<<<<<<< HEAD
+      </Card>
+  ))}
+   <br /> <br /> <br /> <br />
+                    </center>
+                     </div>
+
+                     
+=======
       </div>
+>>>>>>> b9b0b281d44d175bcb3ff7d8cff99b84672f42b4
     );
   }
 }

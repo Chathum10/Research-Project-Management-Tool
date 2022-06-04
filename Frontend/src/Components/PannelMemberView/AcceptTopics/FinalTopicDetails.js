@@ -79,14 +79,7 @@ export default class FinalTopicDetails extends Component {
             {this.state.topics.map((topics, index) => (
               <tr key={index}>
                 <th scope="row">{index + 1}</th>
-                <td>
-                  <a
-                    href={`/topicRoutes/${topics._id}`}
-                    style={{ textDecoration: "none" }}
-                  >
-                    {topics.gid}
-                  </a>
-                </td>
+                <td>{topics.gid}</td>
                 <td>{topics.area}</td>
                 <td>{topics.name}</td>
                 <td>{topics.description}</td>
@@ -96,12 +89,7 @@ export default class FinalTopicDetails extends Component {
                 <td>{topics.csName}</td>
                 <td>{topics.feedback}</td>
                 <td>
-                  <a
-                    className="btn btn-warning"
-                    href={`/Feedback/${topics._id}`}
-                  >
-                    <i className="fas fa-edit"></i>&nbsp;Feedback
-                  </a>
+                  <a href={`/Feedback/${topics._id}`}>Feedback</a>
                 </td>
               </tr>
             ))}

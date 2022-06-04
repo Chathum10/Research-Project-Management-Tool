@@ -21,13 +21,13 @@ class Dashboard extends Component {
               <div className="content">
 
 
-              <div class="text-right">
+              <table width="100%" id="tble" >
               <button 	
                   onClick={this.onLogoutClick}
-                  className="btn btn-lg btn-warning mt-5">
+                  className="btn btn-lg btn-danger mt-5">
                   Logout
                 </button>
-                </div>
+                </table>
 
 
 
@@ -38,6 +38,7 @@ class Dashboard extends Component {
                 <h3>
                   Welcome Back Admin
                 </h3>
+                <br></br>
                 {/* <button
                   onClick={this.onLogoutClick}
                   className="btn btn-lg btn-warning mt-5">

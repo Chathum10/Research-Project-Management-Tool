@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Form from 'react-bootstrap/Form';
+import Card from 'react-bootstrap/Card';
 
 export default class EditUser extends Component {
 
@@ -113,8 +114,14 @@ export default class EditUser extends Component {
                     <center><h1>Edit User Profile</h1></center>
                     <center>
                         <br />
-
-                        <div style={{ marginTop: 20, }} className='container'>
+                        {[
+    'Secondary',
+  ].map((variant) => (
+                        <Card       bg={variant.toLowerCase()}
+                        key={variant}
+                        text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
+                        style={{ width: '40rem' }}
+                        className="mb-2">
 
                             <div className="col-md-8 mt-4 mx-auto">
                                 <br />
@@ -210,7 +217,8 @@ export default class EditUser extends Component {
                                 </form>
 
                             </div>
-                        </div>
+                      </Card>
+                        ))}
 
                         <br /> <br /> <br /> <br />
                     </center>

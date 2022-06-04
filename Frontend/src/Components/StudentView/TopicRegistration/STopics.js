@@ -49,11 +49,14 @@ export default class STopics extends Component {
   render() {
     return (
       <div className="container">
+        <br />
+        <br />
+        <br />
         <div className="row">
           <div className="col-lg-9 mt-2 mb-2">
             <h4>Topic List</h4>
           </div>
-          <div className="col-lg-3 mt-2 mb-2">
+          <div>
             <input
               className="form-control"
               type="searh"
@@ -64,7 +67,7 @@ export default class STopics extends Component {
           </div>
         </div>
 
-        <table className="table">
+        <table>
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -83,14 +86,7 @@ export default class STopics extends Component {
             {this.state.topics.map((topics, index) => (
               <tr key={index}>
                 <th scope="row">{index + 1}</th>
-                <td>
-                  <a
-                    href={`/topicRoutes/${topics._id}`}
-                    style={{ textDecoration: "none" }}
-                  >
-                    {topics.gid}
-                  </a>
-                </td>
+                <td>{topics.gid}</td>
                 <td>{topics.area}</td>
                 <td>{topics.name}</td>
                 <td>{topics.description}</td>
@@ -104,13 +100,8 @@ export default class STopics extends Component {
           </tbody>
         </table>
 
-        <button className="btn btn-success">
-          <a
-            href="/RegisterTopic"
-            style={{ textDecoration: "none", color: "white" }}
-          >
-            Register Topic
-          </a>
+        <button>
+          <a href="/RegisterTopic">Register Topic</a>
         </button>
       </div>
     );

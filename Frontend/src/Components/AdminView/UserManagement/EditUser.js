@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
 
 export default class EditUser extends Component {

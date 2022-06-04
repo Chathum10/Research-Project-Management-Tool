@@ -19,50 +19,57 @@ class Dashboard extends Component {
             <div className="col-12">
               <div className="content">
 
-                
-              <table width="100%" id="tble" >
-              <button 	
-                  onClick={this.onLogoutClick}
-                  className="btn btn-lg btn-danger mt-5">
-                  Logout
-                </button>
+
+                <table width="100%" id="tble" >
+                  <button
+                    onClick={this.onLogoutClick}
+                    className="btn btn-lg btn-danger mt-5">
+                    Logout
+                  </button>
                 </table>
-                
+
                 <h1>
                   Hi !  <b>{user.name.split(' ')[0]} </b>
                 </h1>
                 <h3>
                   You are Successfully logged into Student Dashboard
                 </h3>
-               
-
-               <br></br>
 
 
+                <br></br>
 
-<table width="100%" >
-        <th>
-        <div id="btnNew">
-        <button id="foot" class="btn1"><button class="button-os"><a href="/SubTemplates">Subbmissions</a></button></button>
-        </div>
-        </th>
-        <tr>
-          <td>
-        <div id="btnNew">
-        <button id="foot" class="btn1"><button class="button-os"><a href="/STopics">Topic Registration</a></button></button>
-        </div>
-        </td>
-        </tr>
-        <tr>
-          <td>
-          <div id="btnNew">
-        <button id="foot" class="btn1"><button class="button-os"><a href="/GroupList">Group Registration</a></button></button>
-        </div>
-          </td>
-          
-        </tr>
-        
-        </table>
+
+
+                <table width="100%" >
+                  <th>
+                    <div id="btnNew">
+                      <button id="foot" class="btn1"><button class="button-os"><a href="/SubTemplates">Subbmissions</a></button></button>
+                    </div>
+                  </th>
+                  <tr>
+                    <td>
+                      <div id="btnNew">
+                        <button id="foot" class="btn1"><button class="button-os"><a href="/STopics">Topic Registration</a></button></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="btnNew">
+                        <button id="foot" class="btn1"><button class="button-os"><a href="/GroupList">Group Registration</a></button></button>
+                      </div>
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="btnNew">
+                        <button id="foot" class="btn1"><button class="button-os"><a href="#">Chat Room</a></button></button>
+                      </div>
+                    </td>
+
+                  </tr>
+                </table>
 
 
 

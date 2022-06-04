@@ -13,14 +13,6 @@ class LoginAs extends Component {
             <div className="col-lg-6" >
               <div className="login-right" >
                 
-                {/* <button><a href="/Adminlogin">ADMIN</a></button>
-                <button><a href="/Studentlogin">STUDENT</a></button>
-                <button><a href="/Supervisorlogin">SUPERVISOR</a></button>
-                <button><a href="/CoSupervisorlogin">CO-SUPERVISOR</a></button>
-                <button><a href="/PannelMemberlogin">PANNEL MEMBER</a></button>
-
-
-                <div id="btn"><span class="noselect">Hello</span><div id="circle"></div></div> */}
                  <h1> Log in as..</h1>
 
                 <br></br><br></br><br></br>

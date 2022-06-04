@@ -19,11 +19,11 @@ import PannelMemberDashboard from './Components/Dashboard/PannelMemberDashboard'
 //Administrator View
 import Users from './Components/AdminView/UserManagement/Users';
 import EditUser from './Components/AdminView/UserManagement/EditUser';
-
 import DocCategory from './Components/AdminView/DocumentManagement/DocCategory';
 import SupervisorDoc from './Components/AdminView/DocumentManagement/SupervisorDoc';
 import PannelMemberDoc from './Components/AdminView/DocumentManagement/PannelMemberDoc';
 import StudntDoc from './Components/AdminView/DocumentManagement/StudentDoc';
+import ViewRoles from './Components/AdminView/UserManagement/ViewRoles';
 
 //Student View
 import SubTemplates from './Components/StudentView/DocSubbmissions/SubTemplates';
@@ -69,6 +69,10 @@ import CreatePanel from './Components/AdminView/PannelManagement/CreatePanel';
 import PanelDetailsList from './Components/PannelMemberView/ViewPanel/PanelDetailsList';
 import FinalTopicDetails from './Components/PannelMemberView/AcceptTopics/FinalTopicDetails';
 import Feedback from './Components/PannelMemberView/AcceptTopics/Feedback';
+import ChatManagement from './Components/AdminView/ChatManagement/ChatManagement';
+import AssignChatiD from './Components/AdminView/ChatManagement/AssignChatid';
+import SChatManagement from './Components/SupervisorView/ChatManagement/SChatManagement';
+import CoSChatManagement from './Components/CoSupervisorView/ChatManagement/CoSChatManagement';
 
 
 function App() {
@@ -115,8 +119,9 @@ function App() {
           <Route path="/PanelList" component={PanelList} />
           <Route path="/EditPanelList/:id" component={EditPanelList} />
           <Route path="/CreatePanel" component={CreatePanel} />
-        
-
+          <Route path="/ViewRoles" component={ViewRoles} />
+          <Route path="/ChatManagement" component={ChatManagement} />
+          <Route path="/AssignChatiD/:id" component={AssignChatiD} />
 
 
           {/* Supervisor View */}
@@ -124,6 +129,7 @@ function App() {
           <Route path="/SupervisorFDocs" component={SupervisorFDocs}/>
           <Route path="/SupervisorViewTopics" component={SupervisorViewTopics}/>
           <Route path="/SupervisorReply/:id" component={SupervisorReply}/>
+          <Route path="/SChatManagement" component={SChatManagement}/>
 
           {/* Pannel Member View */}
           <Route path="/VivaMarking" component={VivaMarking} />
@@ -149,6 +155,8 @@ function App() {
           {/* Co Supervisor View */}
           <Route path="/CSviewTopics" component={CSviewTopics} />
           <Route path="/CSreply/:id" component={CSreply} />
+          <Route path="/CoSChatManagement" component={CoSChatManagement} />
+
 
           {/* Chat System */}
           <Route path="/Chat" component={Chat} />

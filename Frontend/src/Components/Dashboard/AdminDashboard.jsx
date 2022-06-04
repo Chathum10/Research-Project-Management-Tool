@@ -67,12 +67,12 @@ class Dashboard extends Component {
         <tr>
           <td>
           <div id="btnNew">
-        <button id="foot" class="btn1"><button class="button-os"><a href="#">View Roles</a></button></button>
+        <button id="foot" class="btn1"><button class="button-os"><a href="/ViewRoles">View Roles</a></button></button>
         </div>
           </td>
           <td>
           <div id="btnNew">
-        <button id="foot" class="btn1"><button class="button-os"><a href="#">Chat Management</a></button></button>
+        <button id="foot" class="btn1"><button class="button-os"><a href="/ChatManagement">Chat Management</a></button></button>
         </div>
           </td>
         </tr>

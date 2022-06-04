@@ -37,11 +37,6 @@ class Dashboard extends Component {
                 
                 <br></br>
 
-                {/* <button><a href="/DocMarking">Document Marking Schemes</a></button>
-                <button><a href="/SupervisorFDocs">Final Documents</a></button>
-                <button><a href="/SupervisorViewTopics">Registered Topics</a></button>
-                 */}
-
 <table width="100%" >
         <th>
         <div id="btnNew">
@@ -61,8 +56,13 @@ class Dashboard extends Component {
         <button id="foot" class="btn1"><button class="button-os"><a href="/SupervisorViewTopics">Registered Topics</a></button></button>
         </div>
           </td>
-          
-          
+        </tr>
+        <tr>
+        <td>
+          <div id="btnNew">
+        <button id="foot" class="btn1"><button class="button-os"><a href="/SChatManagement">Chat Room</a></button></button>
+        </div>
+          </td>
         </tr>
         
         </table>

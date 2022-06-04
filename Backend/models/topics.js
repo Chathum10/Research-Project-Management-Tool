@@ -43,6 +43,9 @@ const topicSchema = new mongoose.Schema({
 
     default: "Not yet finalized ",
   },
+  cId: {
+    type: String,
+  }
 });
 
 module.exports = mongoose.model("Topics", topicSchema);

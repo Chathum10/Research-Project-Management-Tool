@@ -19,17 +19,28 @@ class Dashboard extends Component {
           <div className="row">
             <div className="col-12">
               <div className="content">
+
+
+              <div class="text-right">
+              <button 	
+                  onClick={this.onLogoutClick}
+                  className="btn btn-lg btn-warning mt-5">
+                  Logout
+                </button>
+                </div>
+
+                
                 <h1>
                   Hi! <b>{user.name.split(' ')[0]} </b>
                 </h1>
                 <h3>
                   Wellcome Back Admin
                 </h3>
-                <button
+                {/* <button
                   onClick={this.onLogoutClick}
                   className="btn btn-lg btn-warning mt-5">
                   Logout
-                </button>
+                </button> */}
 {/*                 
                 <button><a href="/userProfiles">User Management</a></button>
                 <button><a href="/DocCategory">Document Management</a></button>

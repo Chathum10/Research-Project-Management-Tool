@@ -1,3 +1,15 @@
+
+.text-right {
+  text-align: right;
+}
+
+
+
+
+
+
+
+
 /** =================banner====================*/
 .dashboard {
     background-image: url('../images/bkground.png');

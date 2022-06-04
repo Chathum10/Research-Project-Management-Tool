@@ -69,7 +69,7 @@ export default class RegisteredGroups extends Component {
           <br />
 
           <table class="table table-bordered ">
-            <thead class="table-info">
+            <thead >
               <tr>
                 <th scope="col">Leader's ID</th>
 
@@ -96,10 +96,10 @@ export default class RegisteredGroups extends Component {
                   <td class="table-light">{groups.panel}</td>
                   <td>
                     <a
-                      className="btn btn-warning"
+                      
                       href={`/AssignPanel/${groups._id}`}
                     >
-                      <i className="fas fa-edit"></i>&nbsp;Assign a pannel
+                      Assign a pannel
                     </a>
                   </td>
                 </tr>
@@ -110,8 +110,7 @@ export default class RegisteredGroups extends Component {
           <br></br>
         </div>
         <br></br>
-        <br></br>
-        <br></br>
+        
       </div>
     );
   }

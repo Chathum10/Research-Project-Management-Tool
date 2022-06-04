@@ -30,10 +30,41 @@ class Dashboard extends Component {
                 >
                   Logout
                 </button>
-                <button><a href="/VivaMarking">Final Presentation Evaluation</a></button>
+                {/* <button><a href="/VivaMarking">Final Presentation Evaluation</a></button>
                 <button><a href="/PTopicRegDocs">Student Topic Registration Documents</a></button>
                 <button><a href="/PanelDetailsList">View My Panel</a></button>
-                <button><a href="/FinalTopicDetails">Accept/Reject Registered Topics</a></button>
+                <button><a href="/FinalTopicDetails">Accept/Reject Registered Topics</a></button> */}
+
+
+
+
+<table width="100%" >
+        <th>
+        <div id="btnNew">
+        <button id="foot" class="btn1"><button class="button-os"><a href="/VivaMarking">Final Presentation Evaluation</a></button></button>
+        </div>
+        </th>
+        <th>
+        <div id="btnNew">
+        <button id="foot" class="btn1"><button class="button-os"><a href="/PTopicRegDocs">Student Topic Registration Documents</a></button></button>
+        </div>
+        </th>
+        <tr>
+          <td>
+          <div id="btnNew">
+        <button id="foot" class="btn1"><button class="button-os"><a href="/PanelDetailsList">View My Panel</a></button></button>
+        </div>
+          </td>
+          <td>
+          <div id="btnNew">
+        <button id="foot" class="btn1"><button class="button-os"><a href="/FinalTopicDetails">Accept/Reject Registered Topics</a></button></button>
+        </div>
+          </td>
+        </tr>
+       
+        </table>
+
+
               </div>
             </div>
           </div>

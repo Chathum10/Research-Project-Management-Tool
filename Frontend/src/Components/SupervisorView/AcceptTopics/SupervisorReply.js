@@ -84,6 +84,8 @@ export default class SupervisorReply extends Component {
   render() {
     return (
       <div className="col-md-8 mt-4 mx-auto">
+        <br />
+        <br />
         <h1 className="h3 mb-3 font-weight-normal">Topic Details</h1>
 
         <form className="needs-validation" noValidate>
@@ -162,6 +164,7 @@ export default class SupervisorReply extends Component {
             <label style={{ marginBottom: "5px" }}>Status</label>
             <br />
             <input
+              required
               className="form-check-input"
               type="radio"
               name="status"
@@ -186,6 +189,8 @@ export default class SupervisorReply extends Component {
             </label>
             &nbsp;&nbsp;
           </div>
+
+        
           <div className="form-group" style={{ marginBottom: "15px" }}>
             <label style={{ marginBottom: "5px" }}>Comments</label>
             <input
@@ -201,6 +206,7 @@ export default class SupervisorReply extends Component {
           <div className="form-group" style={{ marginBottom: "15px" }}>
             <label style={{ marginBottom: "5px" }}>Supervisor's Name</label>
             <input
+              required
               type="text"
               className="form-control"
               name="sName"
@@ -211,13 +217,11 @@ export default class SupervisorReply extends Component {
           </div>
 
           <button
-            className="btn btn-success"
             type="submit"
             style={{ marginTop: "15px" }}
             onClick={this.onSubmit}
           >
-            <i className="far far-check-square"></i>
-            &nbsp; Reply to Thread{" "}
+            &nbsp;Publish
           </button>
         </form>
       </div>

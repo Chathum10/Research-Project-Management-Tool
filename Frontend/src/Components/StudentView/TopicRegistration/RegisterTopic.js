@@ -53,6 +53,8 @@ export default class RegisterTopic extends Component {
   render() {
     return (
       <div className="col-md-8 mt-4 mx-auto">
+        <br />
+        <br />
         <h1 className="h3 mb-3 font-weight-normal">
           Your new discussion topic
         </h1>
@@ -114,7 +116,7 @@ export default class RegisterTopic extends Component {
 
           <div className="form-group" style={{ marginBottom: "15px" }}>
             <label style={{ marginBottom: "5px" }}>Brief Description</label>
-            <input
+            <textarea
               type="text"
               className="form-control"
               name="description"
@@ -125,12 +127,10 @@ export default class RegisterTopic extends Component {
           </div>
 
           <button
-            className="btn btn-success"
             type="submit"
             style={{ marginTop: "15px" }}
             onClick={this.onSubmit}
           >
-            
             &nbsp; Post to forum
           </button>
         </form>

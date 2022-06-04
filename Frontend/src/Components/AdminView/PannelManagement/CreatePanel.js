@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
-
-import Card from 'react-bootstrap/Card';
 import '../../Background/background.css';
+import Card from 'react-bootstrap/Card';
 export default class CreatePanel extends Component {
   constructor(props) {
     super(props);
@@ -54,6 +53,7 @@ export default class CreatePanel extends Component {
 
   render() {
     return (
+      <div class="dashboard">
       <div className="back fixed" style={{ zIndex: 8 }}><br />
        <div className="com-md-8 mt-4 mx-auto"></div>
        <br /> <br />
@@ -71,9 +71,6 @@ export default class CreatePanel extends Component {
 
                             <div className="col-md-8 mt-4 mx-auto">
                                 <br />
-      <div class="dashboard">
-      <div>
-        <h1>Create New Panel</h1>
         <form className="needs-validation" noValidate>
           <div className="form-group" style={{ marginBottom: "15px" }}>
             <label style={{ marginBottom: "5px" }}><b>Panel Number</b></label>
@@ -149,9 +146,9 @@ export default class CreatePanel extends Component {
    <br /> <br /> <br /> <br />
                     </center>
                      </div>
+                     </div>
 
                      
-      </div>
     );
   }
 }

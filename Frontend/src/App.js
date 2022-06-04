@@ -42,9 +42,6 @@ import SupervisorFDocs from './Components/SupervisorView/EvaluateDocuments/Super
 import VivaMarking from './Components/PannelMemberView/EvaluatePresentations/VivaMarking';
 import PTopicRegDocs from './Components/PannelMemberView/EvaluateDocuments/PTopicRegDocs';
 
-//Chat
-import Chat from './ChatSystem/Chat';
-import ChatApp from './ChatSystem/ChatApp';
 
 import Register from './Components/Auth/Register';
 import Navbar from './Components/Navbar/Navbar';
@@ -150,13 +147,6 @@ function App() {
           <Route path="/CSviewTopics" component={CSviewTopics} />
           <Route path="/CSreply/:id" component={CSreply} />
 
-          {/* Chat System */}
-          <Route path="/Chat" component={Chat} />
-          <Route path="/ChatApp" component={ChatApp} />
-
-
-        
-
           <Switch>
             <PrivateRoute exact path="/AdminDashboard" component={AdminDashboard} />
             <PrivateRoute exact path="/StudentDashboard" component={StudentDashboard} />
@@ -173,63 +163,6 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
-
+import Table from "react-bootstrap/Table";
+import Button from "react-bootstrap/Button";
 export default class GroupList extends Component {
   constructor(props) {
     super(props);
@@ -46,10 +47,21 @@ export default class GroupList extends Component {
 
   render() {
     return (
-      <div className="back fixed" style={{ zIndex: 8 }}>
+      <div >
         <br />
-        <div style={{ width: "20%", marginLeft: "80%" }}>
-          <form className="d-flex">
+        <br />
+        <br />
+        <div id="containerJoin">
+          <center>
+            <h1>All Research groups </h1>
+          </center>
+        </div>
+
+        <br />
+        <br />
+        <div style={{ marginTop: 20 }} className="container">
+        <div style={{ width: "25%", marginLeft: "80%" }}>
+        
             <input
               className="form-control me-2"
               type="search"
@@ -57,18 +69,14 @@ export default class GroupList extends Component {
               aria-label="Search"
               onChange={this.handleSearchArea}
             ></input>
-          </form>
         </div>
-        <div id="containerJoin">
-          <center>
-            <h1 className="gifJoin">All Research groups </h1>
-          </center>
         </div>
+       
 
-        <div>
+    
           <br />
 
-          <table class="table table-bordered ">
+          <Table striped>
             <thead>
               <tr>
                 <th>Leader's ID</th>
@@ -85,26 +93,28 @@ export default class GroupList extends Component {
             <tbody>
               {this.state.groups.map((groups) => (
                 <tr>
-                  <td class="table-light">{groups.l_id}</td>
+                  <td >{groups.l_id}</td>
 
-                  <td class="table-light">{groups.member01}</td>
-                  <td class="table-light">{groups.member02}</td>
-                  <td class="table-light">{groups.member03}</td>
-                  <td class="table-light">{groups.member04}</td>
-                  <td class="table-light">{groups.g_id}</td>
-                  <td class="table-light">{groups.panel}</td>
+                  <td >{groups.member01}</td>
+                  <td >{groups.member02}</td>
+                  <td >{groups.member03}</td>
+                  <td >{groups.member04}</td>
+                  <td >{groups.g_id}</td>
+                  <td >{groups.panel}</td>
                 </tr>
               ))}
             </tbody>
-          </table>
+          </Table>
           <br></br>
           <br></br>
 
-          <center>
-            <a className="btn btn-warning text-dark " href="/GroupRegister">
+          <div className="mb-2">
+              <Button variant="warning" size="lg">
+            <a href="/GroupRegister">
               &nbsp;<b>Register Your group</b>
             </a>
-          </center>
+            </Button>
+      
         </div>
         <br></br>
         <br></br>

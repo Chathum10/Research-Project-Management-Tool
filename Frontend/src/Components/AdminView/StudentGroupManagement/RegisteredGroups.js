@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
-
+import Table from "react-bootstrap/Table";
+import Button from "react-bootstrap/Button";
 export default class RegisteredGroups extends Component {
   constructor(props) {
     super(props);
@@ -46,71 +47,66 @@ export default class RegisteredGroups extends Component {
 
   render() {
     return (
-      <div className="back fixed" style={{ zIndex: 8 }}>
-        <br />
-        <div style={{ width: "20%", marginLeft: "80%" }}>
-          <form className="d-flex">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search By Group leader's ID"
-              aria-label="Search"
-              onChange={this.handleSearchArea}
-            ></input>
-          </form>
-        </div>
+      <div >
+        <br /> <br /> <br />
         <div id="containerJoin">
           <center>
-            <h1 className="gifJoin">All Research groups </h1>
+            <h1>All Research groups </h1>
           </center>
         </div>
+        <div style={{ marginTop: 20 }} className="container">
+          <div style={{ width: "20%", marginLeft: "80%" }}>
+            <form>
+              <input
+                className="form-control me-2"
+                type="search"
+                placeholder="Search By Group leader's ID"
+                aria-label="Search"
+                onChange={this.handleSearchArea}
+              ></input>
+            </form>
+          </div>
 
-        <div>
           <br />
 
-          <table class="table table-bordered ">
-            <thead class="table-info">
+          <Table striped>
+            <thead>
               <tr>
-                <th scope="col">Leader's ID</th>
+                <th>Leader's ID</th>
 
-                <th scope="col">Member O1</th>
-                <th scope="col">Member O2</th>
-                <th scope="col">Member O3</th>
-                <th scope="col">Member O4</th>
-                <th scope="col">Group ID</th>
-                <th scope="col">Panel No.</th>
-                <th scope="col">Action</th>
+                <th>Member O1</th>
+                <th>Member O2</th>
+                <th>Member O3</th>
+                <th>Member O4</th>
+                <th>Group ID</th>
+                <th>Panel No.</th>
+                <th>Action</th>
               </tr>
             </thead>
 
             <tbody>
               {this.state.groups.map((groups) => (
                 <tr>
-                  <td class="table-light">{groups.l_id}</td>
+                  <td>{groups.l_id}</td>
 
-                  <td class="table-light">{groups.member01}</td>
-                  <td class="table-light">{groups.member02}</td>
-                  <td class="table-light">{groups.member03}</td>
-                  <td class="table-light">{groups.member04}</td>
-                  <td class="table-light">{groups.g_id}</td>
-                  <td class="table-light">{groups.panel}</td>
+                  <td>{groups.member01}</td>
+                  <td>{groups.member02}</td>
+                  <td>{groups.member03}</td>
+                  <td>{groups.member04}</td>
+                  <td>{groups.g_id}</td>
+                  <td>{groups.panel}</td>
                   <td>
-                    <a
-                      className="btn btn-warning"
-                      href={`/AssignPanel/${groups._id}`}
-                    >
-                      <i className="fas fa-edit"></i>&nbsp;Assign a pannel
-                    </a>
+                    <Button variant="warning" size="sm">
+                      <a href={`/AssignPanel/${groups._id}`}><b>Assign a pannel</b></a>
+                    </Button>
                   </td>
                 </tr>
               ))}
             </tbody>
-          </table>
+          </Table>
           <br></br>
           <br></br>
         </div>
-        <br></br>
-        <br></br>
         <br></br>
       </div>
     );

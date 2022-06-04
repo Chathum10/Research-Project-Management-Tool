@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { FaFileUpload } from 'react-icons/fa';
-
+import '../../Background/background.css';
 import React from 'react'
 
 const StudntDoc = () => {
@@ -41,6 +41,7 @@ const StudntDoc = () => {
   };
 
   return (
+    <div class="dashboard">
     <div><br /><br /><br /><br /><br />
 
       <center><h1>Upload Documentation Templates For Students</h1></center>
@@ -86,7 +87,7 @@ const StudntDoc = () => {
 
       </center>
     </div>
-
+    </div>
   )
 }
 

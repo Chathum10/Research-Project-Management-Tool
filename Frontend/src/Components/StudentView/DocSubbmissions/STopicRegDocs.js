@@ -68,7 +68,11 @@ const STopicRegDocs = () => {
             &nbsp;<FaFileUpload />
           </Button>{' '}
         </div>
-      </div>
+      </div><br />
+      <br />
+      <br />
+      <br />
+      <br />
 
 
 

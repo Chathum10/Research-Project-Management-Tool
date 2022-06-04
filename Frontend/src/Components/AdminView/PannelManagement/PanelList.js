@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import '../../Background/background.css';
 
 export default class PanelList extends Component {
   constructor(props) {
@@ -57,6 +58,7 @@ export default class PanelList extends Component {
 
   render() {
     return (
+      <div class="dashboard">
       <div className="back fixed" style={{ zIndex: 8 }}>
         <br />
         <div style={{ width: "20%", marginLeft: "80%" }}>
@@ -127,6 +129,7 @@ export default class PanelList extends Component {
         <br></br>
         <br></br>
         <br></br>
+      </div>
       </div>
     );
   }

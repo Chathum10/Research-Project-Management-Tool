@@ -1,13 +1,10 @@
 import React, { Component } from "react";
 import axios from "axios";
-<<<<<<< HEAD
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 import { FaEdit, FaPlusCircle,  FaTrash } from "react-icons/fa";
-=======
 import '../../Background/background.css';
 
->>>>>>> b9b0b281d44d175bcb3ff7d8cff99b84672f42b4
 export default class PanelList extends Component {
   constructor(props) {
     super(props);
@@ -64,12 +61,9 @@ export default class PanelList extends Component {
 
   render() {
     return (
-<<<<<<< HEAD
       <div>
-=======
       <div class="dashboard">
       <div className="back fixed" style={{ zIndex: 8 }}>
->>>>>>> b9b0b281d44d175bcb3ff7d8cff99b84672f42b4
         <br />
         <br />
 
@@ -147,15 +141,12 @@ export default class PanelList extends Component {
             <br></br>
           </div>
         </div>
-<<<<<<< HEAD
      
-=======
         <br></br>
         <br></br>
         <br></br>
       </div>
       </div>
->>>>>>> b9b0b281d44d175bcb3ff7d8cff99b84672f42b4
     );
   }
 }

@@ -139,12 +139,10 @@ export default class GroupRegister extends Component {
                   />
                 </div>
                 <button
-                  className="btn btn-success"
                   type="submit"
                   style={{ marginTop: "15px" }}
                   onClick={this.onSubmit}
                 >
-                  <i className="far far-check-square"></i>
                   &nbsp; Register this group
                 </button>
                 <br /> <br /> <br />

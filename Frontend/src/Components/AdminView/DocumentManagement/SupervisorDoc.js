@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { FaFileUpload } from 'react-icons/fa';
-
+import '../../Background/background.css';
 
 import React from 'react'
 
@@ -42,6 +42,7 @@ const SupervisorDoc = () => {
   };
 
   return (
+    <div class="dashboard">
     <div><br /><br /><br /><br /><br />
 
 
@@ -81,6 +82,7 @@ const SupervisorDoc = () => {
 
       </center>
 
+    </div>
     </div>
   )
 }

@@ -2,10 +2,8 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useEffect} from "react";
+
 import React from 'react'
-import Table from 'react-bootstrap/Table';
-import Button from 'react-bootstrap/Button';
-import { FaFile, FaFileDownload, FaFilePowerpoint } from 'react-icons/fa';
 
 
 const VivaMarking = () => {
@@ -26,42 +24,53 @@ const VivaMarking = () => {
         fetchMarksPannel();
       }, []);
 
+    //   const deleteUpload =(pdfId) =>{
+        
+    //     pfdService.deleteFile(pdfId).then((response)=>{
+    //       history('/')
+    //     })
+      
+    //   }
+
   return (
     <div><br /><br /><br /><br /><br />
      
+             <div className="row">
+   
+     </div>
+
             <div style={{marginTop: 20,}} className='container'>
-          
-            <div id="containerJoin">
-          <center>
-            <h1 className="gifJoin">All Presentation Marking Schemes <FaFilePowerpoint/></h1>
-          </center>
-        </div><br />
-                  
+            <div className='row'>
+            <div className='card col-md-10 offset-md-1 offset-md-2'>
 
-        <Table striped>
-          <thead>
-            <tr>
-              <th></th>
-              <th></th>
-              <th><FaFileDownload /></th>
+                  <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th scope="col">Name</th>
+                          <th scope="col">description</th>
+                          <th scope="col">Document</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                          {marksPannel.map((marksPannel)=>
+                          <tr key={marksPannel.id}>
+                            <td>{marksPannel.name}</td>
+                            <td>{marksPannel.description}</td>
+                            <td>{ <a href={marksPannel.pdf} download>{marksPannel.name}</a>}</td>
+                            
+                          </tr>
 
-            </tr>
-          </thead>
-          <tbody>
-            {marksPannel.map((marksPannel) =>
-              <tr key={marksPannel.id}>
-                <td>{marksPannel.name}</td>
-                <td>{marksPannel.description}</td>
-                <td>{<a href={marksPannel.pdf} download>{marksPannel.name}</a>}</td>
-
-              </tr>
-            )
-            }
-          </tbody>
-        </Table>
+                          )
+                            
+                          }
+                        </tbody>           
+                  </table>
 
             </div>
 
+            </div>
+
+        </div>
         
 
     </div>

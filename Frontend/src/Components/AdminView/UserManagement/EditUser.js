@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Card from 'react-bootstrap/Card';
 
 export default class EditUser extends Component {
 
@@ -14,7 +13,7 @@ export default class EditUser extends Component {
             password: "",
             userCategory: "",
             regNo: "",
-            nic: "",
+            nic:"",
             pNo: "",
             date: ""
 
@@ -44,10 +43,10 @@ export default class EditUser extends Component {
             email: email,
             password: password,
             userCategory: userCategory,
-            regNo: regNo,
-            nic: nic,
-            pNo: pNo,
-            date: date,
+            regNo:regNo,
+            nic:nic,
+            pNo:pNo,
+            date:date,
 
         }
 
@@ -66,7 +65,7 @@ export default class EditUser extends Component {
                         password: "",
                         userCategory: "",
                         regNo: "",
-                        nic: "",
+                        nic:"",
                         pNo: "",
                         date: ""
                     }
@@ -108,122 +107,114 @@ export default class EditUser extends Component {
     render() {
         return (
             <div className="back fixed" style={{ zIndex: 8 }}><br />
-                <div className="com-md-8 mt-4 mx-auto">
-                    <br /> <br />
-                    <center><h1>Edit User Profile</h1></center>
-                    <center>
+            <div className="com-md-8 mt-4 mx-auto">
+            <br /> <br />
+            <center><h1><span class="badge bg-info text-dark opacity-90 fs-1">Edit User Profile</span></h1></center>
+            <center>
+                <br />
+
+                    <div className="col-md-8 mt-4 mx-auto">
                         <br />
-                        {[
-    'Secondary',
-  ].map((variant) => (
-                        <Card       bg={variant.toLowerCase()}
-                        key={variant}
-                        text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
-                        style={{ width: '40rem' }}
-                        className="mb-2">
+                        <form className="needs-validation" noValidate>
 
-                            <div className="col-md-8 mt-4 mx-auto">
-                                <br />
-                                <form className="needs-validation" noValidate>
+                            
 
+                        <div className="form-group" style={{ marginBottom: '15px' }}>
+                                <label style={{ marginBottom: '5px' }}><b>SLIIT ID</b></label>
+                                <input type="text"
+                                    className="form-control"
+                                    name="regNo"
+                                    placeholder="Enter Registration Number"
+                                    disabled
+                                    value={this.state.regNo}
+                                    onChange={this.handleInputChange} />
+                            </div><br />
 
+                            <div className="form-group" style={{ marginBottom: '15px' }}>
+                                <label style={{ marginBottom: '5px' }}><b>SLIIT Email</b></label>
+                                <input type="text"
+                                    className="form-control"
+                                    name="email"
+                                    placeholder="Enter valid Email"
+                                    disabled
+                                    value={this.state.email}
+                                    onChange={this.handleInputChange} />
+                            </div><br />
 
-                                    <div className="form-group" style={{ marginBottom: '15px' }}>
-                                        <label style={{ marginBottom: '5px' }}><b>SLIIT ID</b></label>
-                                        <input type="text"
-                                            className="form-control"
-                                            name="regNo"
-                                            placeholder="Enter Registration Number"
-                                            disabled
-                                            value={this.state.regNo}
-                                            onChange={this.handleInputChange} />
-                                    </div><br />
-
-                                    <div className="form-group" style={{ marginBottom: '15px' }}>
-                                        <label style={{ marginBottom: '5px' }}><b>SLIIT Email</b></label>
-                                        <input type="text"
-                                            className="form-control"
-                                            name="email"
-                                            placeholder="Enter valid Email"
-                                            disabled
-                                            value={this.state.email}
-                                            onChange={this.handleInputChange} />
-                                    </div><br />
-
-
-                                    <div className="form-group" style={{ marginBottom: '15px' }}>
-                                        <label style={{ marginBottom: '5px' }}><b>User Category</b></label>
-                                        <select name="userCategory" value={this.state.userCategory} onChange={this.handleInputChange} defaultValue="Select Type" className="form-control" >
-                                            <option value="Student">Student</option>
-                                            <option value="Supervisor">Supervisor</option>
-                                            <option value="Co-Supervisor">Co-Supervisor</option>
-                                            <option value="Pannel Member">Pannel Member</option>
-                                        </select>
-                                    </div><br />
-
-                                    <div className="row">
-                                        <div className="col">
-                                            <div className="form-group" style={{ marginBottom: '15px' }}>
-                                                <label style={{ marginBottom: '5px' }}><b>Full Name</b></label>
-                                                <input type="text"
-                                                    className="form-control"
-                                                    name="name"
-                                                    value={this.state.name}
-                                                    onChange={this.handleInputChange} />
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="form-group" style={{ marginBottom: '15px' }}>
-                                        <label style={{ marginBottom: '5px' }}><b>NIC</b></label>
-                                        <input type="text"
-                                            className="form-control"
-                                            name="nic"
-                                            placeholder="Enter NIC Number"
-                                            value={this.state.nic}
-                                            onChange={this.handleInputChange} />
-                                    </div><br />
-
-
-                                    <div className="form-group" style={{ marginBottom: '15px' }}>
-                                        <label style={{ marginBottom: '5px' }}><b>Contact Number</b></label>
-                                        <input type="text"
-                                            className="form-control"
-                                            name="pNo"
-                                            placeholder="Enter Valid Contact Number (EX:94xxxxxxxxx)"
-                                            value={this.state.pNo}
-                                            onChange={this.handleInputChange} />
-                                    </div><br />
-
-
-                                    <div className="form-group" style={{ marginBottom: '15px' }}>
-                                        <label style={{ marginBottom: '5px' }}><b>Updating Date</b></label>
-                                        <input type="text"
-                                            className="form-control"
-                                            name="date"
-                                            value={this.state.date}
-                                            onChange={this.handleInputChange} />
-                                    </div><br />
-
-
-
-                                    <button className="btn btn-success" type="submit" style={{ marginTop: '15px' }} onClick={this.onSubmit}>
-                                        <i className="far far-check-square"></i>
-                                        &nbsp; Save Changes
-                                    </button>
-                                    <br /> <br /> <br />
-
-                                </form>
-
+                       
+                        <div className="form-group" style={{ marginBottom: '15px' }}>
+                                <label style={{ marginBottom: '5px' }}><b>User Category</b></label>
+                                <select name="userCategory"  value={this.state.userCategory} onChange={this.handleInputChange} defaultValue="Select Type" className="form-control" >
+                                    <option value="Student">Student</option>
+                                        <option value="Supervisor">Supervisor</option>
+                                        <option value="Co-Supervisor">Co-Supervisor</option>
+                                        <option value="Pannel Member">Pannel Member</option>
+                                </select>
+                            </div><br />
+                       
+                            <div className="row">
+                            <div className="col">
+                            <div className="form-group" style={{ marginBottom: '15px' }}>
+                                <label style={{ marginBottom: '5px' }}><b>Full Name</b></label>
+                                <input type="text"
+                                    className="form-control"
+                                    name="name"
+                                    value={this.state.name}
+                                   onChange={this.handleInputChange} />
                             </div>
-                      </Card>
-                        ))}
+                            </div>
+                            </div>
 
-                        <br /> <br /> <br /> <br />
-                    </center>
-                </div>
+                            <div className="form-group" style={{ marginBottom: '15px' }}>
+                                <label style={{ marginBottom: '5px' }}><b>NIC</b></label>
+                                <input type="text"
+                                    className="form-control"
+                                    name="nic"
+                                    placeholder="Enter NIC Number"
+                                    value={this.state.nic}
+                                    onChange={this.handleInputChange} />
+                            </div><br />
 
-            </div>
+
+                            <div className="form-group" style={{ marginBottom: '15px' }}>
+                                <label style={{ marginBottom: '5px' }}><b>Contact Number</b></label>
+                                <input type="text"
+                                    className="form-control"
+                                    name="pNo"
+                                    placeholder="Enter Valid Contact Number (EX:94xxxxxxxxx)"
+                                    value={this.state.pNo}
+                                    onChange={this.handleInputChange} />
+                            </div><br />
+
+                                                        
+                            <div className="form-group" style={{ marginBottom: '15px' }}>
+                                <label style={{ marginBottom: '5px' }}><b>Updating Date</b></label>
+                                <input type="text"
+                                    className="form-control"
+                                    name="date"
+                                    value={this.state.date}
+                                    onChange={this.handleInputChange} />
+                            </div><br />
+
+
+
+                            <button className="btn btn-success" type="submit" style={{ marginTop: '15px' }} onClick={this.onSubmit}>
+                                <i className="far far-check-square"></i>
+                                &nbsp; Save Changes
+                            </button>
+                            <br /> <br /> <br />
+                            
+                        </form>
+
+
+                    </div>
+
+
+
+                <br /> <br /> <br /> <br />
+            </center>
+        </div>
+        </div>
 
 
         )

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
+import { FaArrowAltCircleLeft } from 'react-icons/fa';
 
 export default class CSviewTopics extends Component {
   constructor(props) {
@@ -51,7 +52,14 @@ export default class CSviewTopics extends Component {
   render() {
     return (
       <div>
-        <br /> <br /> <br />
+        <br /><br /><br />
+        <table width="100%" id="tble" >
+          <Button variant="warning" href="/CoSupervisorDashboard">
+            <FaArrowAltCircleLeft /> &nbsp;
+            Dashboard
+          </Button>
+        </table>
+        <br />
         <div id="containerJoin">
           <center>
             <h1>Topic List</h1>

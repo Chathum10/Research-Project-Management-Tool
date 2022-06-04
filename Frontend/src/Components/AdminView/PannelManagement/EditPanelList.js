@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Card from 'react-bootstrap/Card';
-import '../../Background/background.css';
 export default class EditPanelList extends Component {
   constructor(props) {
     super(props);
@@ -71,7 +70,6 @@ export default class EditPanelList extends Component {
 
   render() {
     return (
-      <div class="dashboard">
       <div className="back fixed" style={{ zIndex: 8 }}><br />
       <div className="com-md-8 mt-4 mx-auto"></div>
       <br /> <br />
@@ -164,7 +162,7 @@ export default class EditPanelList extends Component {
    <br /> <br /> <br /> <br />
                     </center>
                      </div>
-   </div>
+
                      
     );
   }

@@ -29,12 +29,22 @@ class Dashboard extends Component {
                 </button>
                 </div>
 
-                
+
+
+                <div class="navigation">
+  	<a class="button2">
+    <div class="logout" >LOGOUT </div>
+	</a>
+  </div>
+
+
+
+
                 <h1>
                   Hi! <b>{user.name.split(' ')[0]} </b>
                 </h1>
                 <h3>
-                  Wellcome Back Admin
+                  Welcome Back Admin
                 </h3>
                 {/* <button
                   onClick={this.onLogoutClick}

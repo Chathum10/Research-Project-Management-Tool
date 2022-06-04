@@ -39,16 +39,6 @@ class Dashboard extends Component {
                   Welcome Back Admin
                 </h3>
                 <br></br>
-                {/* <button
-                  onClick={this.onLogoutClick}
-                  className="btn btn-lg btn-warning mt-5">
-                  Logout
-                </button> */}
-{/*                 
-                <button><a href="/userProfiles">User Management</a></button>
-                <button><a href="/DocCategory">Document Management</a></button>
-                <button><a href="/RegisteredGroups">Student Group Management</a></button>
-                <button><a href="/PanelList">Pannel Management</a></button> */}
 
 
 <table width="100%" >
@@ -77,12 +67,12 @@ class Dashboard extends Component {
         <tr>
           <td>
           <div id="btnNew">
-        <button id="foot" class="btn1"><button class="button-os"><a href="/RegisteredGroups">btn</a></button></button>
+        <button id="foot" class="btn1"><button class="button-os"><a href="#">View Roles</a></button></button>
         </div>
           </td>
           <td>
           <div id="btnNew">
-        <button id="foot" class="btn1"><button class="button-os"><a href="/PanelList">btn</a></button></button>
+        <button id="foot" class="btn1"><button class="button-os"><a href="#">Chat Management</a></button></button>
         </div>
           </td>
         </tr>

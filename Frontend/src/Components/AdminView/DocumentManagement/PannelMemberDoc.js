@@ -4,7 +4,6 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { FaFileUpload } from 'react-icons/fa';
 import React from 'react'
-import '../../Background/background.css';
 
 const PannelMemberDoc = () => {
   const history = useHistory();
@@ -41,7 +40,6 @@ const PannelMemberDoc = () => {
   };
 
   return (
-    <div class="dashboard">
     <div><br /><br /><br /><br /><br />
 
 
@@ -82,7 +80,6 @@ const PannelMemberDoc = () => {
 
       </center>
 
-    </div>
     </div>
   )
 }

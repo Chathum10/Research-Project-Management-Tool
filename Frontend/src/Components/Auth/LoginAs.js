@@ -22,6 +22,7 @@ class LoginAs extends Component {
 
                 <div id="btn"><span class="noselect">Hello</span><div id="circle"></div></div> */}
                  <h1> Log in as..</h1>
+
                 <br></br><br></br><br></br>
                 <ul>
                 <li ><span><a href="/Adminlogin">ADMIN</a></span></li>

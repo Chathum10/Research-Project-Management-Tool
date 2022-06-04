@@ -148,6 +148,7 @@ export default class GroupRegister extends Component {
                 <br /> <br /> <br />
               </form>
             </div>
+            
           </center>
         </div>
       </div>

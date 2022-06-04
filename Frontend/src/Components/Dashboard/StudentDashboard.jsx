@@ -30,9 +30,40 @@ class Dashboard extends Component {
                 >
                   Logout
                 </button>
-                <button><a href="/SubTemplates">Subbmissions</a></button>
+                {/* <button><a href="/SubTemplates">Subbmissions</a></button>
                 <button><a href="/STopics">Topic Registration</a></button>
-                <button><a href="/GroupList">Group Registration</a></button>
+                <button><a href="/GroupList">Group Registration</a></button> */}
+
+
+<table width="100%" >
+        <th>
+        <div id="btnNew">
+        <button id="foot" class="btn1"><button class="button-os"><a href="/SubTemplates">Subbmissions</a></button></button>
+        </div>
+        </th>
+        <tr>
+          <td>
+        <div id="btnNew">
+        <button id="foot" class="btn1"><button class="button-os"><a href="/STopics">Topic Registration</a></button></button>
+        </div>
+        </td>
+        </tr>
+        <tr>
+          <td>
+          <div id="btnNew">
+        <button id="foot" class="btn1"><button class="button-os"><a href="/GroupList">Group Registration</a></button></button>
+        </div>
+          </td>
+          
+        </tr>
+        
+        </table>
+
+
+
+
+
+
               </div>
             </div>
           </div>

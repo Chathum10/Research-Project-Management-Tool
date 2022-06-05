@@ -173,31 +173,14 @@ export default class SupervisorReply extends Component {
                     />
                   </div>
 
-                  <div className="form-group" style={{ marginBottom: "15px" }}>
-                    <label style={{ marginBottom: "5px" }}><b>Status</b></label>
-                    <br />
-                    <input
-                      required
-                      className="form-check-input"
-                      type="radio"
-                      name="status"
-                      onChange={this.handleInputChange}
-                      value={this.state.status}
-                    />
-                    <label class="form-check-label" for="flexRadioDefault1">
-                      {" "}
-                      Approved{" "}
-                    </label>
-                    &nbsp;&nbsp;
-                    <input
-                      className="form-check-input"
-                      type="radio"
-                      name="status"
-                      onChange={this.handleInputChange}
-                      value={this.state.status}
-                    />
-                    <label class="form-check-label" for="flexRadioDefault2">Rejected</label>
-                    &nbsp;&nbsp;
+
+                  <div className="form-group" style={{ marginBottom: '15px' }}>
+                    <label style={{ marginBottom: '5px' }}><b>Status</b></label>
+                    <select name="status" value={this.state.status} onChange={this.handleInputChange} defaultValue="Select Type" className="form-control" >
+                      <option value="Pending">Pending</option>
+                      <option value="Approved">Approved</option>
+                      <option value="Rejected">Rejected</option>
+                    </select>
                   </div>
 
 

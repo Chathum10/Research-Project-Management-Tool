@@ -65,7 +65,7 @@ const UploadTRD = () => {
             <form onSubmit={upload} encType="multipart/form-data" >
 
               <div className="form-group">
-                <input type="text" placeholder="Name" value={name} required
+                <input type="text" placeholder="Group ID" value={name} required
                   onChange={e => { setName(e.target.value) }}
                   className="form-control" />
               </div>
